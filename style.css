@@ -1,0 +1,338 @@
+/* Global */
+
+@font-face {
+	font-family: inter;
+	src: url("fonts/Inter-VariableFont.ttf");
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+:root {
+    --red: #C92519;
+    --grey: #F2F3F5;
+    --h-colour: #111827;
+    --p-colour: #374151;
+    --footer-text: #D1D5DB;
+    --footer-background: #333333;
+}
+
+h1, h2 {
+    color: var(--h-colour) !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-size: 1.5em !important;
+}
+
+h3 {
+    font-size: 1em !important;
+    font-weight: 600 !important;
+}
+
+.caption {
+    font-size: 12px;
+}
+
+* {
+    font-family: inter;
+    color: var(--p-colour) !important;
+    /* margin: 0 !important;
+    padding: 0 !important; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.checked-ul {
+    list-style-type: none;
+    padding-left: 0 !important;
+}
+
+section {
+    padding: 5em 2em !important;
+}
+
+.grey-bg {
+    background-color: var(--grey);
+}
+
+.no-spacing {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sticky-padding {
+    padding-top: 160px;
+}
+
+/* NAV */
+
+.logo {
+    height: 48px;
+}
+
+.bg-custom {
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: var(--red) !important;
+    border: none !important;
+    color: white !important;
+}
+
+.btn-secondary {
+    background-color: transparent !important;
+    border: var(--red) 1.5px solid !important;
+    color: var(--red) !important;
+}
+
+/* PAGE: HOME */
+/* Hero */
+
+.hero-section {
+    height: 75vh;
+    /* background-color: blue; */
+    max-width: none !important;
+    padding: 80px 0 !important;
+}
+
+.hero-marquee {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-marquee-track {
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.hero-marquee-img {
+    width: auto;
+    height: 512px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+
+/* Stats */
+
+.stats-number {
+    font-size: 1.5em;
+    margin-bottom: 0 !important;
+}
+
+.red-line {
+    width: 2px;
+    height: 50px;
+    background-color: var(--red);
+}
+
+/* Programs */
+
+.card {
+    padding: 24px 18px;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+/* Offered Lnaguages */
+
+.shadow {
+    border: none !important;
+    border-radius: 12px;
+    box-shadow: 0 0 .5rem rgba(0, 11, 91, 0.1);
+}
+
+/* Different */
+
+.section-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Reviews */
+
+.reviews-section .card {
+    max-width: 330px;
+    height: fit-content;
+}
+
+/* CTA */
+
+.cta-box {
+    max-width: 674px !important;
+    width: 100% !important;
+}
+
+/* FAQ */
+
+.faq-item {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.btn-link {
+    text-decoration: none !important;
+}
+
+.card-header {
+    background-color: #fff !important;
+    border: none !important;
+    width: 100% !important;
+}
+
+.card-header h5 button, .reviews-user {
+    font-weight: 600 !important;
+}
+
+.faq-btn {
+    /* background-color: red !important; */
+    width: 100%;
+    white-space: normal;
+}
+
+.card-header {
+    padding: 0 !important;
+}
+
+.card-body {
+    padding: 16px 26px !important;
+}
+
+/* arrows up when faq is open */
+.faq-btn .faq-chevron {
+    transition: transform 200ms ease;
+}
+/* open: up */
+.faq-btn:not(.collapsed) .faq-chevron {
+    transform: rotate(180deg);
+}
+
+.faq-question {
+    /* min-width: 0; */
+    white-space: normal;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--footer-background);
+    padding: 48px 0;
+}
+
+.footer-header {
+    color: #fff !important;
+}
+
+.footer-text {
+    color: var(--footer-text) !important;
+}
+
+.footer-link {
+    margin: 0 !important;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------------- */
+
+/* PAGE: PROGRAMS */
+
+.programs-pricing-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.programs-pricing-table th,
+.programs-pricing-table td {
+    padding: 4px 8px;
+    vertical-align: middle;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    text-align: center;
+}
+
+.programs-pricing-table thead th {
+    font-weight: 700;
+    background-color: #fff;
+    border-top: none;
+    border-bottom: none;
+}
+
+.programs-pricing-table thead .programs-pricing-duration {
+    text-align: center;
+    font-weight: 700;
+}
+
+.programs-pricing-table tbody .programs-pricing-duration {
+    text-align: left;
+    font-weight: 400;
+    border-left: none;
+}
+
+.programs-pricing-table .programs-pricing-note {
+    font-size: 0.5rem;
+    font-weight: 400;
+}
+
+.programs-pricing-table .programs-pricing-divider {
+    width: 9px;
+    min-width: 9px;
+    padding: 0;
+    border-left: 3px double #ccc;
+    border-right: 3px double #ccc;
+    background-color: #fff;
+}
+
+.programs-pricing-table tbody tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+.programs-pricing-table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.programs-pricing-table tbody tr:last-child {
+    background-color: #fff;
+}
+
+.programs-pricing-table tbody th.programs-pricing-duration {
+    font-weight: 400;
+}
+
+/* intensive courses section */
+
+.intensive-card {
+    padding: 0 !important;
+}
+
+/* evening courses section */
+
+.evening-card {
+    padding: 0 !important;
+}
+
+.housing-box {
+    background-color: #fff;
+    padding: 0 !important;
+    margin: 0 !important;
+}
