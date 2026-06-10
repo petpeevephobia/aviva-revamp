@@ -1,14 +1,41 @@
 <?php
-// Set before include: $currentPage = 'home';
-$navItems = [
-  'home'   => ['label' => 'Home',   'url' => 'index.php'],
-  'programs'   => ['label' => 'Programs',   'url' => 'programs.php'],
-  'activities' => ['label' => 'Activities', 'url' => 'activities.php'],
-  'register'   => ['label' => 'Register',   'url' => 'register.php'],
-  'contact'    => ['label' => 'Contact',    'url' => 'contact.php'],
-];
-$currentPage = $currentPage ?? '';
+// 1. Ensure session tracking is safely booted
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// 2. Capture language changes via query parameter, defaulting to English
+if (isset($_GET['lang'])) {
+    $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
+} else {
+    $_SESSION['lang'] = $_SESSION['lang'] ?? 'en';
+}
+
+$currentLang = $_SESSION['lang'];
+
+// 3. Define the $navItems structural data matching your translations
+if ($currentLang === 'de') {
+    $navItems = [
+        'home'       => ['url' => 'index.php', 'label' => 'Startseite'],
+        'programs'   => ['url' => 'programs.php', 'label' => 'Programme'],
+        'activities' => ['url' => 'activities.php', 'label' => 'Aktivitäten'],
+        'registration' => ['url' => 'register.php', 'label' => 'Anmeldung'],
+        'contact'    => ['url' => 'contact.php', 'label' => 'Kontakt']
+    ];
+} else {
+    $navItems = [
+        'home'       => ['url' => 'index.php', 'label' => 'Home'],
+        'programs'   => ['url' => 'programs.php', 'label' => 'Programs'],
+        'activities' => ['url' => 'activities.php', 'label' => 'Activities'],
+        'registration' => ['url' => 'register.php', 'label' => 'Registration'],
+        'contact'    => ['url' => 'contact.php', 'label' => 'Contact']
+    ];
+}
+
+// 4. Capture current script filename so flag toggles don't break routing context
+$currentFile = basename($_SERVER['PHP_SELF']);
 ?>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-custom sticky-top">
   <a class="navbar-brand" href="index.php">
     <img class="logo" src="pics/new-logo.png" alt="Logo">
@@ -29,9 +56,8 @@ $currentPage = $currentPage ?? '';
       <?php endforeach; ?>
     </div>
     <div>
-      <!-- Language selector -->
-      <a href="?lang=en"><img src="pics/en.gif" alt="English"></a>
-      <a href="?lang=de"><img src="pics/de.gif" alt="German"></a>
+      <a href="<?= $currentFile; ?>?lang=en"><img src="pics/en.gif" alt="English"></a>
+      <a href="<?= $currentFile; ?>?lang=de"><img src="pics/de.gif" alt="German"></a>
     </div>
   </div>
 </nav>

@@ -1,3 +1,35 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$currentPage = 'home';
+
+// Catch the URL query string immediately BEFORE defining the $reviewsTxt array
+if (isset($_GET['lang'])) {
+    $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
+}
+
+$currentLang = $_SESSION['lang'] ?? 'en';
+
+// Dictionary mapping strings to keys
+if ($currentLang === 'de') {
+    $reviewsTxt = [
+
+        // GOOGLE RATINGS
+        'ratings_subtitle' => '4,9/5 bei über 70 Google-Bewertungen',
+        'ratings_role' => 'Sprachschüler',
+
+    ]; 
+} else {
+    $reviewsTxt = [
+        // GOOGLE RATINGS
+        'ratings_subtitle' => '4,9/5 from 70+ Google Reviews',
+        'ratings_role' => 'Language Student',
+
+    ];
+}
+?>
+
 
 
 <section class="reviews-section grey-bg">
@@ -10,7 +42,7 @@
         </div>
         
         <div class="row w-100 mt-2">
-            <h3 class="text-center w-100">4,9/5 from 70+ Google Reviews</h3>
+            <h3 class="text-center w-100"><?= htmlspecialchars($reviewsTxt['ratings_subtitle']) ?></h3>
         </div>
         </div>
 
@@ -26,7 +58,7 @@
                     
                     <div class="col">
                         <div class="row"><p class="reviews-user no-spacing">Araceli Stubbe</p></div>
-                        <div class="row"><p class="caption no-spacing">Language Student</p></div>
+                        <div class="row"><p class="caption no-spacing"><?= htmlspecialchars($reviewsTxt['ratings_role']) ?></p></div>
                     </div>
                     </div>
                 </div>
@@ -43,7 +75,7 @@
                     
                     <div class="col">
                         <div class="row"><p class="reviews-user no-spacing">楊雪榕</p></div>
-                        <div class="row"><p class="caption no-spacing">Language Student</p></div>
+                        <div class="row"><p class="caption no-spacing"><?= htmlspecialchars($reviewsTxt['ratings_role']) ?></p></div>
                     </div>
                     </div>
                 </div>
@@ -60,7 +92,7 @@
                     
                     <div class="col">
                         <div class="row"><p class="reviews-user no-spacing">Nitsuga Apiat</p></div>
-                        <div class="row"><p class="caption no-spacing">Language Student</p></div>
+                        <div class="row"><p class="caption no-spacing"><?= htmlspecialchars($reviewsTxt['ratings_role']) ?></p></div>
                     </div>
                     </div>
                 </div>

@@ -1,49 +1,92 @@
 <?php
-$ctaTitle = $ctaTitle ?? 'Ready to Begin Your Life in Germany?';
-$ctaText  = $ctaText  ?? 'Join 100+ successful students who have transformed their lives in Germany with A-Viva.';
-$ctaHeading = $ctaHeading ?? 'We Support Your Every Step';
-$ctaBullets = $ctaBullets ?? [
-  'Visa application support',
-  'Housing assistance',
-  'Flexible payment plans',
-  'Exam preparation',
-];
-$ctaPrimaryLabel = $ctaPrimaryLabel ?? 'Apply now';
-$ctaPrimaryUrl   = $ctaPrimaryUrl   ?? 'contact.php';
-$ctaSecondaryLabel = $ctaSecondaryLabel ?? 'Get course details';
-$ctaSecondaryUrl   = $ctaSecondaryUrl   ?? 'programs.php';
-$ctaCaption = $ctaCaption ?? 'Classes fill quickly. Secure your spot today!';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$currentPage = 'home';
+
+// Catch the URL query string immediately BEFORE defining the $reviewsTxt array
+if (isset($_GET['lang'])) {
+    $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
+}
+
+$currentLang = $_SESSION['lang'] ?? 'en';
+
+// Dictionary mapping strings to keys
+if ($currentLang === 'de') {
+    $ctaTxt = [
+        // CTA
+        'cta_title' => 'Sind Sie bereit, Ihr Leben in Deutschland zu beginnen?',
+        'cta_subtitle' => 'Schließe dich den über 100 erfolgreichen Studierenden an, die mit A-Viva ihr Leben in Deutschland verändert haben.',
+        'cta_title2' => 'Wir begleiten Sie auf jedem Schritt Ihres Weges',
+        'cta_item1' => 'Unterstützung bei der Beantragung eines Visums',
+        'cta_item2' => 'Wohnungsbeihilfe',
+        'cta_item3' => 'Flexible Zahlungspläne',
+        'cta_item4' => 'Prüfungsvorbereitung',
+        'cta_cta1' => 'Jetzt bewerben',
+        'cta_cta2' => 'Kursdetails anzeigen',
+        'cta_subtitle2' => 'Die Kurse sind schnell ausgebucht. Sichern Sie sich noch heute Ihren Platz!',
+
+    ]; 
+} else {
+    $ctaTxt = [
+        // CTA
+        'cta_title' => 'Ready to Begin Your Life in Germany?',
+        'cta_subtitle' => 'Join 100+ successful students who have transformed their lives in Germany with A-Viva.',
+        'cta_title2' => 'We Support Your Every Step',
+        'cta_item1' => 'Visa application support',
+        'cta_item2' => 'Housing assistance',
+        'cta_item3' => 'Flexible payment plans',
+        'cta_item4' => 'Exam preparation',
+        'cta_cta1' => 'Apply now',
+        'cta_cta2' => 'Get course details',
+        'cta_subtitle2' => 'Classes fill quickly. Secure your spot today!',
+
+    ];
+}
 ?>
+
+
+
 <section class="cta-section">
   <div class="container">
 
     <div class="row mb-5 text-center">
-      <h2 class="w-100"><?= htmlspecialchars($ctaTitle) ?></h2>
-      <p class="w-100"><?= htmlspecialchars($ctaText) ?></p>
+      <h2 class="w-100"><?= htmlspecialchars($ctaTxt['cta_title']) ?></h2>
+      <p class="w-100"><?= htmlspecialchars($ctaTxt['cta_subtitle']) ?></p>
     </div>
 
     <div class="row shadow p-4 cta-box mx-auto">
       <div class="col-md">
-        <h3><?= htmlspecialchars($ctaHeading) ?></h3>
+        <h3><?= htmlspecialchars($ctaTxt['cta_title2']) ?></h3>
 
         <ul class="checked-ul mt-4">
-          <?php foreach ($ctaBullets as $bullet): ?>
             <li>
               <img class="mr-2 mb-2" src="pics/red-check.svg" alt="Checkmark">
-              <?= htmlspecialchars($bullet) ?>
+              <?= htmlspecialchars($ctaTxt['cta_item1']) ?>
             </li>
-          <?php endforeach; ?>
+            <li>
+              <img class="mr-2 mb-2" src="pics/red-check.svg" alt="Checkmark">
+              <?= htmlspecialchars($ctaTxt['cta_item2']) ?>
+            </li>
+            <li>
+              <img class="mr-2 mb-2" src="pics/red-check.svg" alt="Checkmark">
+              <?= htmlspecialchars($ctaTxt['cta_item3']) ?>
+            </li>
+            <li>
+              <img class="mr-2 mb-2" src="pics/red-check.svg" alt="Checkmark">
+              <?= htmlspecialchars($ctaTxt['cta_item4']) ?>
+            </li>
         </ul>
       </div>
 
       <div class="col-md">
-        <a href="<?= htmlspecialchars($ctaPrimaryUrl) ?>" class="btn btn-primary d-block w-100">
-          <?= htmlspecialchars($ctaPrimaryLabel) ?>
+        <a href="contact.php" class="btn btn-primary d-block w-100">
+          <?= htmlspecialchars($ctaTxt['cta_cta1']) ?>
         </a>
-        <a href="<?= htmlspecialchars($ctaSecondaryUrl) ?>" class="btn btn-secondary d-block w-100 mt-2">
-          <?= htmlspecialchars($ctaSecondaryLabel) ?>
+        <a href="programs.php" class="btn btn-secondary d-block w-100 mt-2">
+          <?= htmlspecialchars($ctaTxt['cta_cta2']) ?>
         </a>
-        <p class="caption text-center mt-2"><?= htmlspecialchars($ctaCaption) ?></p>
+        <p class="caption text-center mt-2"><?= htmlspecialchars($ctaTxt['cta_subtitle2']) ?></p>
       </div>
     </div>
 

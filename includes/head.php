@@ -2,6 +2,19 @@
 $pageTitle = $pageTitle ?? 'A-Viva Sprachschule';
 $pageDescription = $pageDescription ?? '';
 $extraCss = $extraCss ?? []; // optional per-page stylesheets
+
+// Language selector
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+// Check if a language change was requested via URL string (?lang=de)
+if (isset($_GET['lang'])) {
+  $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
+} else {
+  // Default language fallback if no session is set yet
+  $_SESSION['lang'] = $_SESSION['lang'] ?? 'en'; 
+}
 ?>
 
 
