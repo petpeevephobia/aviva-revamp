@@ -103,7 +103,7 @@ if ($currentLang === 'de') {
         'usp_item3_text1' => 'Whether you need a 2-week crash course or a full year of immersion, we adapt to your timeline. With year-round availability, vacation programs, and courses running continuously, you can start your German journey exactly when you\'re ready.',
 
         // LIFE
-        'life_title' => 'We\’re More Than Just Language Classes',
+        'life_title' => 'We\'re More Than Just Language Classes',
         'life_text1' => 'At A-Viva, your experience extends beyond the classroom. Join our vibrant community for:',
         'life_list1' => 'Weekend trips to German cities and countryside',
         'life_list2' => 'Cultural workshops',
