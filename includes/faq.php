@@ -1,7 +1,4 @@
 <?php
-// Check current language of page
-$currentLang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'en';
-
 if (!isset($faqItems)) {
     $faqItems = [
         'q1'    => [

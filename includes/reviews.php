@@ -1,16 +1,4 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-$currentPage = 'home';
-
-// Catch the URL query string immediately BEFORE defining the $reviewsTxt array
-if (isset($_GET['lang'])) {
-    $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
-}
-
-$currentLang = $_SESSION['lang'] ?? 'en';
-
 // Dictionary mapping strings to keys
 if ($currentLang === 'de') {
     $reviewsTxt = [

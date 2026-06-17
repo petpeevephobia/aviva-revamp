@@ -8,13 +8,16 @@ if (session_status() === PHP_SESSION_NONE) {
   session_start();
 }
 
-// Check if a language change was requested via URL string (?lang=de)
-if (isset($_GET['lang'])) {
-  $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
-} else {
-  // Default language fallback if no session is set yet
-  $_SESSION['lang'] = $_SESSION['lang'] ?? 'en'; 
+// 2. Define allowed languages
+$allowedLangs = ['en', 'de'];
+
+// 3. Set the language
+if (isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs)) {
+    $_SESSION['lang'] = $_GET['lang'];
 }
+
+// 4. Set the global variable
+$currentLang = $_SESSION['lang'] ?? 'en';
 ?>
 
 

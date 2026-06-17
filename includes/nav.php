@@ -1,18 +1,4 @@
 <?php
-// 1. Ensure session tracking is safely booted
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-// 2. Capture language changes via query parameter, defaulting to English
-if (isset($_GET['lang'])) {
-    $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
-} else {
-    $_SESSION['lang'] = $_SESSION['lang'] ?? 'en';
-}
-
-$currentLang = $_SESSION['lang'];
-
 // 3. Define the $navItems structural data matching your translations
 if ($currentLang === 'de') {
     $navItems = [
