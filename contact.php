@@ -1,14 +1,49 @@
-<?php
-$pageTitle   = 'A-Viva Sprachschule - Contact Us';
-$currentPage = 'contact';
-// $pageDescription = 'German courses in Frankfurt...';
-
-require __DIR__ . '/includes/contact-handler.php';
-?>
-
 <!doctype html>
 <html lang="en">
   <?php require __DIR__ . '/includes/head.php'; ?>
+
+
+
+
+  <?php
+  $pageTitle   = 'A-Viva Sprachschule - Contact Us';
+  $currentPage = 'contact';
+  // $pageDescription = 'German courses in Frankfurt...';
+
+  if ($currentLang === 'de') {
+    $txt = [
+      'contact_title' => 'Kontakt',
+      'contact_text' => 'Wir melden uns so schnell wie möglich bei Ihnen.',
+      'name' => 'Name',
+      'name_placeholder' => 'Ihr Name',
+      'email' => 'Email',
+      'email_placeholder' => 'name@beispiel.com',
+      'phone_number' => 'Telefonnummer',
+      'phone_number_placeholder' => 'Ihre Telefonnummer',
+      'message' => 'Nachricht',
+      'message_placeholder' => 'Ihre Nachricht',
+      'contact_cta' => 'Nachricht senden',
+      'thankyou_text' => 'Vielen Dank. Ihre Nachricht wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
+    ];
+  } else {
+    $txt = [
+      'contact_title' => 'Contact Us',
+      'contact_text' => 'We will get back to you as soon as possible.',
+      'name' => 'Name',
+      'name_placeholder' => 'Your name',
+      'email' => 'Email',
+      'email_placeholder' => 'name@example.com',
+      'phone_number' => 'Phone number',
+      'phone_number_placeholder' => 'Your phone number',
+      'message' => 'Message',
+      'message_placeholder' => 'Your message',
+      'contact_cta' => 'Send message',
+      'thankyou_text' => 'Thank you. Your message has been sent. We will get back to you as soon as possible.'
+    ];
+  }
+
+  require __DIR__ . '/includes/contact-handler.php';
+  ?>
 
 
 
@@ -28,9 +63,9 @@ require __DIR__ . '/includes/contact-handler.php';
       <section class="form-section">
         <div class="container">
           <div class="row mb-4 text-left">
-            <h1 class="w-100">Contact Us</h2>
+            <h1 class="w-100"><?= htmlspecialchars($txt['contact_title']) ?></h2>
             <p class="w-100">	              	
-              We will get back to you as soon as possible.
+              <?= htmlspecialchars($txt['contact_text']) ?>
             </p>
           </div>
 
@@ -39,7 +74,7 @@ require __DIR__ . '/includes/contact-handler.php';
             <div class="col-md-8 col-lg-6">
               <?php if ($formSuccess): ?>
                 <div class="alert alert-success" role="alert">
-                  Thank you. Your message has been sent. We will get back to you as soon as possible.
+                  <?= htmlspecialchars($txt['thankyou_text']) ?>
                 </div>
               <?php endif; ?>
 
@@ -58,22 +93,22 @@ require __DIR__ . '/includes/contact-handler.php';
               <form method="post" action="contact.php">
                 <fieldset<?= !empty($contactRequiresWebServer) ? ' disabled' : '' ?>>
                 <div class="form-group">
-                  <label for="contactName">Name</label>
-                  <input type="text" class="form-control" id="contactName" name="name" placeholder="Your name" value="<?= htmlspecialchars($contactName) ?>" required>
+                  <label for="contactName"><?= htmlspecialchars($txt['name']) ?></label>
+                  <input type="text" class="form-control" id="contactName" name="name" placeholder="<?= htmlspecialchars($txt['name_placeholder']) ?>" value="<?= htmlspecialchars($contactName) ?>" required>
                 </div>
                 <div class="form-group">
-                  <label for="contactEmail">Email</label>
-                  <input type="email" class="form-control" id="contactEmail" name="email" placeholder="name@example.com" value="<?= htmlspecialchars($contactEmail) ?>" required>
+                  <label for="contactEmail"><?= htmlspecialchars($txt['email']) ?></label>
+                  <input type="email" class="form-control" id="contactEmail" name="email" placeholder="<?= htmlspecialchars($txt['email_placeholder']) ?>" value="<?= htmlspecialchars($contactEmail) ?>" required>
                 </div>
                 <div class="form-group">
-                  <label for="contactPhone">Phone number</label>
-                  <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="Your phone number" value="<?= htmlspecialchars($contactPhone) ?>">
+                  <label for="contactPhone"><?= htmlspecialchars($txt['phone_number']) ?></label>
+                  <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="<?= htmlspecialchars($txt['phone_number_placeholder']) ?>" value="<?= htmlspecialchars($contactPhone) ?>">
                 </div>
                 <div class="form-group">
-                  <label for="contactMessage">Message</label>
-                  <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="Your message" required><?= htmlspecialchars($contactMessage) ?></textarea>
+                  <label for="contactMessage"><?= htmlspecialchars($txt['message']) ?></label>
+                  <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="<?= htmlspecialchars($txt['message_placeholder']) ?>" required><?= htmlspecialchars($contactMessage) ?></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send message</button>
+                <button type="submit" class="btn btn-primary"><?= htmlspecialchars($txt['contact_cta']) ?></button>
                 </fieldset>
               </form>
             </div>

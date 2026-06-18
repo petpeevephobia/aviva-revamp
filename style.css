@@ -51,6 +51,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    min-height: 70vh;
+}
+
 .checked-ul {
     list-style-type: none;
     padding-left: 0 !important;

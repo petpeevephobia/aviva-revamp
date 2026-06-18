@@ -1,174 +1,166 @@
-<?php
-$pageTitle   = 'A-Viva Sprachschule - Programs';
-$currentPage = 'programs';
-// $pageDescription = 'German courses in Frankfurt...';
-
-if (isset($_GET['lang'])) {
-  $_SESSION['lang'] = ($_GET['lang'] === 'de') ? 'de' : 'en';
-}
-
-$currentLang = $_SESSION['lang'] ?? 'en';
-
-if ($currentLang === 'de') {
-  $txt = [
-    // HERO
-    'hero_title' => 'Präsenzprogramme',
-    'hero_text' => 'Wir bieten Programme auf Deutsch, Chinesisch, Englisch, Französisch, Griechisch, Italienisch, Spanisch, Portugiesisch, Japanisch und auf Anfrage auch in weiteren Sprachen an. Alle Programme finden das ganze Jahr über statt, einschließlich Ferienkursen in den Sommer-, Winter- und Frühjahrsferien sowie in anderen Ferienzeiten. Das A-viva CLASS-Konzept (Kultur. Sprache. Kunst. Sport. Gesellschaftliche Veranstaltungen) basiert auf dem Prinzip „Lernen mit Spaß“ – wenn das Lernen Spaß macht, sind die Schüler motiviert, und das Lernen wird effektiv. Übersetzt mit DeepL.com (kostenlose Version)',
-
-    // INTENSIVE COURSES
-    'intensive_title' => 'Intensivkurse',
-    'intensive_subtitle' => 'Mindestens 18 Unterrichtsstunden pro Woche mit täglichem Unterricht, der auf einen umfassenden Spracherwerb ausgerichtet ist. Die Preise beinhalten die Anmeldegebühr, Steuern, Prüfungen und Zertifikate. Sollte jemand aus irgendeinem Grund die geplante Prüfung versäumen, wird eine Gebühr von 100 € bis 150 € erhoben, um die Prüfung zu einem anderen Termin abzulegen.',
-    // PROGRAM A
-    'intensive_a_title' => 'Intensivprogramm A',
-    'intensive_a_item1' => '20 Unterrichtsstunden pro Woche',
-    'intensive_a_item2' => 'Berechtigt zum Erhalt eines Visums in Deutschland',
-    'intensive_a_item3' => 'Bis zu 8 Schüler pro Klasse',
-    'intensive_a_item4' => 'Angebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
-    'intensive_a_item5' => 'Die Unterbringung ist optional',
-    'intensive_a_text' => 'Die Gebühr beginnt bei 600 € pro Monat',
-    'intensive_a_cta' => 'Anfragen',
-    // PROGRAM B
-    'intensive_b_title' => 'Intensivprogramm B',
-    'intensive_b_item1' => '30 Unterrichtsstunden pro Woche',
-    'intensive_b_item2' => 'Berechtigt zum Erhalt eines Visums in Deutschland',
-    'intensive_b_item3' => 'Bis zu 8 Schüler pro Klasse',
-    'intensive_b_item4' => 'Angebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
-    'intensive_b_item5' => 'Die Unterbringung ist optional',
-    'intensive_b_text' => 'Die Gebühr beginnt bei 1000 € pro Monat',
-    'intensive_b_cta' => 'Anfragen',
-    // NEED A PLACE TO STAY
-    'intensive_stay_title' => 'Brauchst du eine Unterkunft während deines Kurses?',
-    'intensive_stay_subtitle' => 'Wir bieten Wohnungen, Gastfamilien und Jugendherbergen an. Nur für Teilnehmer an einem Intensivkurs.',
-    'intensive_stay_cta' => 'Wohnmöglichkeiten entdecken',
-
-    // EVENING COURSES
-    'evening_title' => 'Abend- und Wochenendkurse',
-    'evening_subtitle' => 'Eine flexible Möglichkeit für Berufstätige oder Studierende, ihre Sprachkenntnisse zu verbessern, ohne ihre primären Verpflichtungen tagsüber zu beeinträchtigen. Die Preise beinhalten die Anmeldung, Steuern, Prüfungen und Zertifikate. Sollte jemand aus irgendeinem Grund den geplanten Prüfungstermin verpassen, wird eine Gebühr von 100 € bis 150 € erhoben, um die Prüfung zu einem anderen Termin abzulegen.',
-    // PROGRAM A
-    'evening_e1_title' => 'Abendkurs E1',
-    'evening_e1_item1' => '2 Unterrichtsstunden pro Woche',
-    'evening_e1_item2' => 'Ein Abend pro Woche',
-    'evening_e1_item3' => 'Bis zu 8 Schüler pro Klasse',
-    'evening_e1_item4' => 'Angebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
-    'evening_e1_item5' => 'Eine Unterkunft wird nicht angeboten',
-    'evening_e1_text' => 'Die Gebühr beginnt bei 80 € pro Monat',
-    'evening_e1_cta' => 'Anfragen',
-    // PROGRAM B
-    'evening_e2_title' => 'Abendkurs E2',
-    'evening_e2_item1' => '4 Unterrichtsstunden pro Woche',
-    'evening_e2_item2' => 'Zwei Abende pro Woche',
-    'evening_e2_item3' => 'Bis zu 8 Schüler pro Klasse',
-    'evening_e2_item4' => 'OfAngebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
-    'evening_e2_item5' => 'Eine Unterkunft wird nicht angeboten',
-    'evening_e2_text' => 'Die Gebühr beginnt bei 160 € pro Monat',
-    'evening_e2_cta' => 'Anfragen',
-
-    // EXAMS
-    'exams_title' => 'Prüfungen zum Nachweis deutscher Sprachkenntnisse',
-    'exams_subtitle' => 'Die Prüfungen und Zertifikate, die am Ende jeder Stufe (von A1 bis C2) ausgestellt werden, sind für Teilnehmer des entsprechenden Kurses kostenlos. Externe Teilnehmer anderer Schulen, die Prüfungen bei A-viva ablegen möchten, finden weitere Informationen weiter unten.',
-    // A1 - A2
-    'exams_a_title' => 'A1- und A2-Prüfungen',
-    'exams_a_subtitle' => 'Einmalige Gebühr von 200 € pro Versuch',
-    'exams_a_cta' => 'Anfragen',
-    // B1 - C2
-    'exams_b_title' => 'B1- und C2-Prüfungen',
-    'exams_b_subtitle' => 'Einmalige Gebühr von 300 € pro Versuch',
-    'exams_b_cta' => 'Anfragen',
-
-    // BORING CLASSES
-    'boring_title' => 'Langweilige Unterrichtsstunden sind nicht erlaubt!',
-    'boring_item1_title' => 'Eindringliche Szenen aus dem Unterricht',
-    'boring_item1_text' => 'Um den Unterricht noch relevanter und spontaner zu gestalten, nutzen wir die ganze Stadt als „lebendigen“ Unterrichtsraum und halten den Unterricht gelegentlich auch außerhalb der Schule ab, beispielsweise in einem Café, im Park, in einem Museum oder in der Bibliothek.',
-    'boring_item2_title' => 'Hausaufgaben sind nicht „nur Hausaufgaben“',
-    'boring_item2_text' => 'Neben regelmäßigen Grammatik- und Vokabelübungen analysieren die Schüler täglich Nachrichten und berichten am nächsten Tag in eigenen Worten vor der Klasse darüber. Zu den optionalen Aufgaben gehören die Suche nach einem historischen Objekt in der Stadt, die Befragung von Passanten in der Nachbarschaft oder ein Besuch im Rathaus im Rahmen eines Forschungsprojekts.',
-    'boring_item3_title' => 'Kostenloser Nachhilfeunterricht',
-    'boring_item3_text' => 'Für alle, die zusätzliche Unterstützung wünschen, stehen unsere Lehrassistenten am Nachmittag für kostenlosen Nachhilfeunterricht zur Verfügung.',
-    'boring_item4_title' => 'Individuelle Betreuung',
-    'boring_item4_text' => 'Im Anschluss an den schriftlichen Einstufungstest wird der Teilnehmer von einem Kursleiter in einem Einzelgespräch hinsichtlich seiner Hör- und Sprechfähigkeiten beurteilt, bevor er in eine geeignete Kursstufe eingestuft wird. Während der gesamten Kursdauer werden die Leistungsfortschritte des Teilnehmers genau beobachtet und in einem individuellen Bericht festgehalten.',
-  ];
-} else {
-  $txt = [
-    // HERO
-    'hero_title' => 'Face-to-Face Programs',
-    'hero_text' => 'We offer programs in German, Chinese, English, French, Greek, Italian, Spanish, Portuguese, Japanese and other languages on request. All programs run year-round, including vacation courses for summer, winter, spring break and other holiday periods. The A-viva CLASS concept (Culture. Language. Arts. Sports. Social events) is based on the principles of “learning by having fun” – when learning is fun, students are motivated, and learning becomes effective.',
-
-    // INTENSIVE COURSES
-    'intensive_title' => 'Intensive Courses',
-    'intensive_subtitle' => 'At least 18 hours of instruction per week with daily lessons aimed at comprehensive language acquisition. Prices include registration, taxes, exams and certificates. If anyone misses the scheduled exam for any reason, a fee of 100€ to 150€ will be charged to take the exam on another date.',
-    // PROGRAM A
-    'intensive_a_title' => 'Intensive Program A',
-    'intensive_a_item1' => '20 lessons per week',
-    'intensive_a_item2' => 'Qualifies for visa in Germany',
-    'intensive_a_item3' => 'Up to 8 students per class',
-    'intensive_a_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
-    'intensive_a_item5' => 'Housing accommodation is optional',
-    'intensive_a_text' => 'Fee starts at 600€ per month',
-    'intensive_a_cta' => 'Enquire',
-    // PROGRAM B
-    'intensive_b_title' => 'Intensive Program B',
-    'intensive_b_item1' => '30 lessons per week',
-    'intensive_b_item2' => 'Qualifies for visa in Germany',
-    'intensive_b_item3' => 'Up to 8 students per class',
-    'intensive_b_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
-    'intensive_b_item5' => 'Housing accommodation is optional',
-    'intensive_b_text' => 'Fee starts at 1000€ per month.',
-    'intensive_b_cta' => 'Enquire',
-    // NEED A PLACE TO STAY
-    'intensive_stay_title' => 'Need a Place to Stay During Your Course?',
-    'intensive_stay_subtitle' => 'We offer apartments, host families, and youth hostels. Only for students enrolled in an intensive program.',
-    'intensive_stay_cta' => 'Explore housing',
-
-    // EVENING COURSES
-    'evening_title' => 'Evening And Weekend Courses',
-    'evening_subtitle' => 'A flexible option for working professionals or students to improve their language skills without disrupting primary daytime commitments. Prices include registration, taxes, exams and certificates. If anyone misses the scheduled exam for any reason, a fee of 100€ to 150€ will be charged to take the exam on another date.',
-    // PROGRAM A
-    'evening_e1_title' => 'Evening Program E1',
-    'evening_e1_item1' => '2 lessons per week',
-    'evening_e1_item2' => 'One evening per week',
-    'evening_e1_item3' => 'Up to 8 students per class',
-    'evening_e1_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
-    'evening_e1_item5' => 'Housing accommodation is not offered',
-    'evening_e1_text' => 'Fee starts at 80€ per month.',
-    'evening_e1_cta' => 'Enquire',
-    // PROGRAM B
-    'evening_e2_title' => 'Evening Program E2',
-    'evening_e2_item1' => '4 lessons per week',
-    'evening_e2_item2' => 'Two evenings per week',
-    'evening_e2_item3' => 'Up to 8 students per class',
-    'evening_e2_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
-    'evening_e2_item5' => 'Housing accommodation is not offered',
-    'evening_e2_text' => 'Fee starts at 160€ per month.',
-    'evening_e2_cta' => 'Enquire',
-
-    // EXAMS
-    'exams_title' => 'Exams for German Language Certification',
-    'exams_subtitle' => 'Exams and certificates given at the end of each level, from A1 to C2, are free of charge for students enrolled in the corresponding course. For external students from other schools who wish to take exams at A-viva, do refer to the information below.',
-    // A1 - A2
-    'exams_a_title' => 'A1 - A2 Exams',
-    'exams_a_subtitle' => 'One-time fee of 200€ per attempt',
-    'exams_a_cta' => 'Enquire',
-    // B1 - C2
-    'exams_b_title' => 'B1 - C2 Exams',
-    'exams_b_subtitle' => 'One-time fee of 300€ per attempt',
-    'exams_b_cta' => 'Enquire',
-
-    // BORING CLASSES
-    'boring_title' => 'Boring Classes Are Not Allowed!',
-    'boring_item1_title' => 'Immersive Classroom Scenes',
-    'boring_item1_text' => 'To add a touch of relevance and spontaneity, we take advantage of the whole city as a ‘living’ classroom and occasionally conduct some classes outside of school, such as in a café, in the park, in a museum, or in the library.',
-    'boring_item2_title' => 'Homework Is Not \'Just Homework\'',
-    'boring_item2_text' => 'In addition to regular grammar and vocabulary exercises, students execute daily news analysis and report it in their own words to the class the next day. Optional assignments include hunting for a historical object in the city, interviewing pedestrians in the neighborhood, or visiting the city hall for a research project.',
-    'boring_item3_title' => 'Free Tutoring',
-    'boring_item3_text' => 'For those who wish to benefit from some extra help, our teaching assistants are at your service for free tutoring in the afternoon.',
-    'boring_item4_title' => 'Individual Attention',
-    'boring_item4_text' => 'Following the written placement test, the student is interviewed one-on-one by an instructor for listening and verbal assessment before being placed in an appropriate class level. During the course of the study period, the student\'s performance progress is closely monitored and recorded in a customized report.',
-  ];
-}
-?>
-
 <!doctype html>
 <html lang="en">
   <?php require __DIR__ . '/includes/head.php'; ?>
+
+
+
+  <?php
+  if ($currentLang === 'de') {
+    $txt = [
+      // HERO
+      'hero_title' => 'Präsenzprogramme',
+      'hero_text' => 'Wir bieten Programme auf Deutsch, Chinesisch, Englisch, Französisch, Griechisch, Italienisch, Spanisch, Portugiesisch, Japanisch und auf Anfrage auch in weiteren Sprachen an. Alle Programme finden das ganze Jahr über statt, einschließlich Ferienkursen in den Sommer-, Winter- und Frühjahrsferien sowie in anderen Ferienzeiten. Das A-viva CLASS-Konzept (Kultur. Sprache. Kunst. Sport. Gesellschaftliche Veranstaltungen) basiert auf dem Prinzip „Lernen mit Spaß“ – wenn das Lernen Spaß macht, sind die Schüler motiviert, und das Lernen wird effektiv. Übersetzt mit DeepL.com (kostenlose Version)',
+
+      // INTENSIVE COURSES
+      'intensive_title' => 'Intensivkurse',
+      'intensive_subtitle' => 'Mindestens 18 Unterrichtsstunden pro Woche mit täglichem Unterricht, der auf einen umfassenden Spracherwerb ausgerichtet ist. Die Preise beinhalten die Anmeldegebühr, Steuern, Prüfungen und Zertifikate. Sollte jemand aus irgendeinem Grund die geplante Prüfung versäumen, wird eine Gebühr von 100 € bis 150 € erhoben, um die Prüfung zu einem anderen Termin abzulegen.',
+      // PROGRAM A
+      'intensive_a_title' => 'Intensivprogramm A',
+      'intensive_a_item1' => '20 Unterrichtsstunden pro Woche',
+      'intensive_a_item2' => 'Berechtigt zum Erhalt eines Visums in Deutschland',
+      'intensive_a_item3' => 'Bis zu 8 Schüler pro Klasse',
+      'intensive_a_item4' => 'Angebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
+      'intensive_a_item5' => 'Die Unterbringung ist optional',
+      'intensive_a_text' => 'Die Gebühr beginnt bei 600 € pro Monat',
+      'intensive_a_cta' => 'Anfragen',
+      // PROGRAM B
+      'intensive_b_title' => 'Intensivprogramm B',
+      'intensive_b_item1' => '30 Unterrichtsstunden pro Woche',
+      'intensive_b_item2' => 'Berechtigt zum Erhalt eines Visums in Deutschland',
+      'intensive_b_item3' => 'Bis zu 8 Schüler pro Klasse',
+      'intensive_b_item4' => 'Angebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
+      'intensive_b_item5' => 'Die Unterbringung ist optional',
+      'intensive_b_text' => 'Die Gebühr beginnt bei 1000 € pro Monat',
+      'intensive_b_cta' => 'Anfragen',
+      // NEED A PLACE TO STAY
+      'intensive_stay_title' => 'Brauchst du eine Unterkunft während deines Kurses?',
+      'intensive_stay_subtitle' => 'Wir bieten Wohnungen, Gastfamilien und Jugendherbergen an. Nur für Teilnehmer an einem Intensivkurs.',
+      'intensive_stay_cta' => 'Wohnmöglichkeiten entdecken',
+
+      // EVENING COURSES
+      'evening_title' => 'Abend- und Wochenendkurse',
+      'evening_subtitle' => 'Eine flexible Möglichkeit für Berufstätige oder Studierende, ihre Sprachkenntnisse zu verbessern, ohne ihre primären Verpflichtungen tagsüber zu beeinträchtigen. Die Preise beinhalten die Anmeldung, Steuern, Prüfungen und Zertifikate. Sollte jemand aus irgendeinem Grund den geplanten Prüfungstermin verpassen, wird eine Gebühr von 100 € bis 150 € erhoben, um die Prüfung zu einem anderen Termin abzulegen.',
+      // PROGRAM A
+      'evening_e1_title' => 'Abendkurs E1',
+      'evening_e1_item1' => '2 Unterrichtsstunden pro Woche',
+      'evening_e1_item2' => 'Ein Abend pro Woche',
+      'evening_e1_item3' => 'Bis zu 8 Schüler pro Klasse',
+      'evening_e1_item4' => 'Angebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
+      'evening_e1_item5' => 'Eine Unterkunft wird nicht angeboten',
+      'evening_e1_text' => 'Die Gebühr beginnt bei 80 € pro Monat',
+      'evening_e1_cta' => 'Anfragen',
+      // PROGRAM B
+      'evening_e2_title' => 'Abendkurs E2',
+      'evening_e2_item1' => '4 Unterrichtsstunden pro Woche',
+      'evening_e2_item2' => 'Zwei Abende pro Woche',
+      'evening_e2_item3' => 'Bis zu 8 Schüler pro Klasse',
+      'evening_e2_item4' => 'OfAngebotene Niveaustufen je nach Verfügbarkeit: A1, A2, B1, B2, C1, C2',
+      'evening_e2_item5' => 'Eine Unterkunft wird nicht angeboten',
+      'evening_e2_text' => 'Die Gebühr beginnt bei 160 € pro Monat',
+      'evening_e2_cta' => 'Anfragen',
+
+      // EXAMS
+      'exams_title' => 'Prüfungen zum Nachweis deutscher Sprachkenntnisse',
+      'exams_subtitle' => 'Die Prüfungen und Zertifikate, die am Ende jeder Stufe (von A1 bis C2) ausgestellt werden, sind für Teilnehmer des entsprechenden Kurses kostenlos. Externe Teilnehmer anderer Schulen, die Prüfungen bei A-viva ablegen möchten, finden weitere Informationen weiter unten.',
+      // A1 - A2
+      'exams_a_title' => 'A1- und A2-Prüfungen',
+      'exams_a_subtitle' => 'Einmalige Gebühr von 200 € pro Versuch',
+      'exams_a_cta' => 'Anfragen',
+      // B1 - C2
+      'exams_b_title' => 'B1- und C2-Prüfungen',
+      'exams_b_subtitle' => 'Einmalige Gebühr von 300 € pro Versuch',
+      'exams_b_cta' => 'Anfragen',
+
+      // BORING CLASSES
+      'boring_title' => 'Langweilige Unterrichtsstunden sind nicht erlaubt!',
+      'boring_item1_title' => 'Eindringliche Szenen aus dem Unterricht',
+      'boring_item1_text' => 'Um den Unterricht noch relevanter und spontaner zu gestalten, nutzen wir die ganze Stadt als „lebendigen“ Unterrichtsraum und halten den Unterricht gelegentlich auch außerhalb der Schule ab, beispielsweise in einem Café, im Park, in einem Museum oder in der Bibliothek.',
+      'boring_item2_title' => 'Hausaufgaben sind nicht „nur Hausaufgaben“',
+      'boring_item2_text' => 'Neben regelmäßigen Grammatik- und Vokabelübungen analysieren die Schüler täglich Nachrichten und berichten am nächsten Tag in eigenen Worten vor der Klasse darüber. Zu den optionalen Aufgaben gehören die Suche nach einem historischen Objekt in der Stadt, die Befragung von Passanten in der Nachbarschaft oder ein Besuch im Rathaus im Rahmen eines Forschungsprojekts.',
+      'boring_item3_title' => 'Kostenloser Nachhilfeunterricht',
+      'boring_item3_text' => 'Für alle, die zusätzliche Unterstützung wünschen, stehen unsere Lehrassistenten am Nachmittag für kostenlosen Nachhilfeunterricht zur Verfügung.',
+      'boring_item4_title' => 'Individuelle Betreuung',
+      'boring_item4_text' => 'Im Anschluss an den schriftlichen Einstufungstest wird der Teilnehmer von einem Kursleiter in einem Einzelgespräch hinsichtlich seiner Hör- und Sprechfähigkeiten beurteilt, bevor er in eine geeignete Kursstufe eingestuft wird. Während der gesamten Kursdauer werden die Leistungsfortschritte des Teilnehmers genau beobachtet und in einem individuellen Bericht festgehalten.',
+    ];
+  } else {
+    $txt = [
+      // HERO
+      'hero_title' => 'Face-to-Face Programs',
+      'hero_text' => 'We offer programs in German, Chinese, English, French, Greek, Italian, Spanish, Portuguese, Japanese and other languages on request. All programs run year-round, including vacation courses for summer, winter, spring break and other holiday periods. The A-viva CLASS concept (Culture. Language. Arts. Sports. Social events) is based on the principles of “learning by having fun” – when learning is fun, students are motivated, and learning becomes effective.',
+
+      // INTENSIVE COURSES
+      'intensive_title' => 'Intensive Courses',
+      'intensive_subtitle' => 'At least 18 hours of instruction per week with daily lessons aimed at comprehensive language acquisition. Prices include registration, taxes, exams and certificates. If anyone misses the scheduled exam for any reason, a fee of 100€ to 150€ will be charged to take the exam on another date.',
+      // PROGRAM A
+      'intensive_a_title' => 'Intensive Program A',
+      'intensive_a_item1' => '20 lessons per week',
+      'intensive_a_item2' => 'Qualifies for visa in Germany',
+      'intensive_a_item3' => 'Up to 8 students per class',
+      'intensive_a_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
+      'intensive_a_item5' => 'Housing accommodation is optional',
+      'intensive_a_text' => 'Fee starts at 600€ per month',
+      'intensive_a_cta' => 'Enquire',
+      // PROGRAM B
+      'intensive_b_title' => 'Intensive Program B',
+      'intensive_b_item1' => '30 lessons per week',
+      'intensive_b_item2' => 'Qualifies for visa in Germany',
+      'intensive_b_item3' => 'Up to 8 students per class',
+      'intensive_b_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
+      'intensive_b_item5' => 'Housing accommodation is optional',
+      'intensive_b_text' => 'Fee starts at 1000€ per month.',
+      'intensive_b_cta' => 'Enquire',
+      // NEED A PLACE TO STAY
+      'intensive_stay_title' => 'Need a Place to Stay During Your Course?',
+      'intensive_stay_subtitle' => 'We offer apartments, host families, and youth hostels. Only for students enrolled in an intensive program.',
+      'intensive_stay_cta' => 'Explore housing',
+
+      // EVENING COURSES
+      'evening_title' => 'Evening And Weekend Courses',
+      'evening_subtitle' => 'A flexible option for working professionals or students to improve their language skills without disrupting primary daytime commitments. Prices include registration, taxes, exams and certificates. If anyone misses the scheduled exam for any reason, a fee of 100€ to 150€ will be charged to take the exam on another date.',
+      // PROGRAM A
+      'evening_e1_title' => 'Evening Program E1',
+      'evening_e1_item1' => '2 lessons per week',
+      'evening_e1_item2' => 'One evening per week',
+      'evening_e1_item3' => 'Up to 8 students per class',
+      'evening_e1_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
+      'evening_e1_item5' => 'Housing accommodation is not offered',
+      'evening_e1_text' => 'Fee starts at 80€ per month.',
+      'evening_e1_cta' => 'Enquire',
+      // PROGRAM B
+      'evening_e2_title' => 'Evening Program E2',
+      'evening_e2_item1' => '4 lessons per week',
+      'evening_e2_item2' => 'Two evenings per week',
+      'evening_e2_item3' => 'Up to 8 students per class',
+      'evening_e2_item4' => 'Offered levels based on availability: A1, A2, B1, B2, C1, C2',
+      'evening_e2_item5' => 'Housing accommodation is not offered',
+      'evening_e2_text' => 'Fee starts at 160€ per month.',
+      'evening_e2_cta' => 'Enquire',
+
+      // EXAMS
+      'exams_title' => 'Exams for German Language Certification',
+      'exams_subtitle' => 'Exams and certificates given at the end of each level, from A1 to C2, are free of charge for students enrolled in the corresponding course. For external students from other schools who wish to take exams at A-viva, do refer to the information below.',
+      // A1 - A2
+      'exams_a_title' => 'A1 - A2 Exams',
+      'exams_a_subtitle' => 'One-time fee of 200€ per attempt',
+      'exams_a_cta' => 'Enquire',
+      // B1 - C2
+      'exams_b_title' => 'B1 - C2 Exams',
+      'exams_b_subtitle' => 'One-time fee of 300€ per attempt',
+      'exams_b_cta' => 'Enquire',
+
+      // BORING CLASSES
+      'boring_title' => 'Boring Classes Are Not Allowed!',
+      'boring_item1_title' => 'Immersive Classroom Scenes',
+      'boring_item1_text' => 'To add a touch of relevance and spontaneity, we take advantage of the whole city as a ‘living’ classroom and occasionally conduct some classes outside of school, such as in a café, in the park, in a museum, or in the library.',
+      'boring_item2_title' => 'Homework Is Not \'Just Homework\'',
+      'boring_item2_text' => 'In addition to regular grammar and vocabulary exercises, students execute daily news analysis and report it in their own words to the class the next day. Optional assignments include hunting for a historical object in the city, interviewing pedestrians in the neighborhood, or visiting the city hall for a research project.',
+      'boring_item3_title' => 'Free Tutoring',
+      'boring_item3_text' => 'For those who wish to benefit from some extra help, our teaching assistants are at your service for free tutoring in the afternoon.',
+      'boring_item4_title' => 'Individual Attention',
+      'boring_item4_text' => 'Following the written placement test, the student is interviewed one-on-one by an instructor for listening and verbal assessment before being placed in an appropriate class level. During the course of the study period, the student\'s performance progress is closely monitored and recorded in a customized report.',
+    ];
+  }
+  ?>
 
 
 
@@ -603,11 +595,11 @@ if ($currentLang === 'de') {
               'id' => 'headerThree',
               'question' => [
                   'en' => 'What is the A-Viva CLASS concept?',
-                  'de' => 'Was ist das A-Viva CLASS-Konzept??'
+                  'de' => 'Was ist das A-Viva CLASS-Konzept?'
               ],
               'answer' => [
                   'en' => 'CLASS stands for Culture, Language, Arts, Sports, and Social events. Learning happens inside the classroom and through real-life experiences, so students stay motivated and actually use the language instead of memorizing it.',
-                  'de' => 'CLASS steht für Kultur, Sprache, Kunst, Sport und gesellschaftliche Veranstaltungen. Das Lernen findet sowohl im Unterricht als auch durch Erfahrungen im Alltag statt, sodass die Schüler motiviert bleiben und die Sprache tatsächlich anwenden, anstatt sie nur auswendig zu lernen..'
+                  'de' => 'CLASS steht für Kultur, Sprache, Kunst, Sport und gesellschaftliche Veranstaltungen. Das Lernen findet sowohl im Unterricht als auch durch Erfahrungen im Alltag statt, sodass die Schüler motiviert bleiben und die Sprache tatsächlich anwenden, anstatt sie nur auswendig zu lernen.'
                   ]
           ],
           'q4'    => [
@@ -619,8 +611,8 @@ if ($currentLang === 'de') {
                   'de' => 'Wie läuft der Unterricht bei A-Viva ab?'
               ],
               'answer' => [
-                  'en' => 'Bsses are interactive and creative, using games, role plays, quizzes, humor, and discussions. Some lessons take place outside the school in cafés, parks, museums, or libraries, turning the city into a living classroom.',
-                  'de' => 'Der Unterricht ist interaktiv und kreativ und nutzt Spiele, Rollenspiele, Quizfragen, Humor und Diskussionen. Einige Unterrichtsstunden finden außerhalb der Schule in Cafés, Parks, Museen oder Bibliotheken statt, wodurch die Stadt zu einem lebendigen Klassenzimmer wird..'
+                  'en' => 'Classes are interactive and creative, using games, role plays, quizzes, humor, and discussions. Some lessons take place outside the school in cafés, parks, museums, or libraries, turning the city into a living classroom.',
+                  'de' => 'Der Unterricht ist interaktiv und kreativ und nutzt Spiele, Rollenspiele, Quizfragen, Humor und Diskussionen. Einige Unterrichtsstunden finden außerhalb der Schule in Cafés, Parks, Museen oder Bibliotheken statt, wodurch die Stadt zu einem lebendigen Klassenzimmer wird.'
                   ]
           ],
           'q5'    => [

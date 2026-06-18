@@ -3,10 +3,10 @@
 if ($currentLang === 'de') {
     $footerTxt = [
         'footer_title' => 'A-Viva Sprachschule',
-        'footer_text' => 'A dynamic fusion of language institute + culture/sports/social club.',
-        'quick_links' => 'Quick Links',
-        'contact_us' => 'Contact Us',
-        'copyright' => 'All rights reserved.',
+        'footer_text' => 'Eine dynamische Kombination aus Sprachschule und Kultur-, Sport- und Gesellschaftsverein.',
+        'quick_links' => 'Schnellzugriff',
+        'contact_us' => 'Kontakt',
+        'copyright' => 'Alle Rechte vorbehalten.',
     ];
     $quickLinks = [
         'home'              => ['label' =>  'Startseite',  'url'   =>  'index.php'],
@@ -18,10 +18,10 @@ if ($currentLang === 'de') {
 } else {
     $footerTxt = [
         'footer_title' => 'A-Viva Sprachschule',
-        'footer_text' => 'Eine dynamische Kombination aus Sprachschule und Kultur-, Sport- und Gesellschaftsverein.',
-        'quick_links' => 'Schnellzugriff',
-        'contact_us' => 'Kontakt',
-        'copyright' => 'Alle Rechte vorbehalten.',
+        'footer_text' => 'A dynamic fusion of language institute + culture/sports/social club.',
+        'quick_links' => 'Quick Links',
+        'contact_us' => 'Contact Us',
+        'copyright' => 'All rights reserved.',
     ];
     $quickLinks = [
         'home'              => ['label' =>  'Home',  'url'   =>  'index.php'],
