@@ -1,16 +1,14 @@
 <?php
-// 1. Start session
-if (session_status() === PHP_SESSION_NONE) {
-  session_start();
+// 1. Start session 
+session_start();
+
+
+if (!isset($_SESSION['lang'])) {
+  $_SESSION['lang'] = 'en'; 
 }
 
-$allowedLangs = ['en', 'de'];
-  if (isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs)) {
-      $_SESSION['lang'] = $_GET['lang'];
-  }
-
 // 4. Set global variable
-$currentLang = $_SESSION['lang'] ?? 'en';
+$currentLang = $_SESSION['lang'];
 
 $pageTitle = $pageTitle ?? 'A-Viva Sprachschule';
 $pageDescription = $pageDescription ?? '';
@@ -34,6 +32,7 @@ $extraCss = $extraCss ?? []; // optional per-page stylesheets
   <?php foreach ($extraCss as $href): ?>
     <link rel="stylesheet" href="<?= htmlspecialchars($href) ?>">
   <?php endforeach; ?>
+  <script src="main.js" defer></script>
 
   <title><?= htmlspecialchars($pageTitle) ?></title>
 </head>

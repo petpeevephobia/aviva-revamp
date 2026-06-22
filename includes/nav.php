@@ -42,8 +42,10 @@ $currentFile = basename($_SERVER['PHP_SELF']);
       <?php endforeach; ?>
     </div>
     <div>
-      <a href="<?= $currentFile; ?>?lang=en"><img src="pics/en.gif" alt="English"></a>
-      <a href="<?= $currentFile; ?>?lang=de"><img src="pics/de.gif" alt="German"></a>
+      <!-- <a href="<?= $currentFile; ?>?lang=en"><img src="pics/en.gif" alt="English"></a> -->
+      <!-- <a href="<?= $currentFile; ?>?lang=de"><img src="pics/de.gif" alt="German"></a> -->
+      <a href="#" class="lang-selector" data-lang="en"><img src="pics/en.gif" alt="English"></a>
+      <a href="#" class="lang-selector" data-lang="de"><img src="pics/de.gif" alt="German"></a>
     </div>
   </div>
 </nav>
