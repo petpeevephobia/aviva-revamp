@@ -25,30 +25,30 @@
       <section class="activities-section">
         <div class="container">
           <div class="row mb-5 text-left">
-            <h1 class="w-100">Activities At A-Viva</h2>
-            <p class="w-100">Our activities are carefully designed for students to build a connection with their surroundings and practise their language. They are either free or at minimal cost. We are non-profit oriented, and travel planning is a free service to our students! Our dedicated travel planners are experienced travelers familiar with the cities and the languages and able to find the best local deals.</p>
-            <p class="w-100">Day trips take place at the end of the week. i.e.: a popular destination is Heidelberg, a romantic university town whose beauty has inspired many painters and writers over the centuries.</p>
-            <p class="w-100">Week-end trips take place at the end of the month and last from 2 to 4 days. For example: Berlin - a cultural and historical mecca of Germany, or Munich - the marvelous host city of Oktoberfest. Other destinations include Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prague, and Vienna.</p>
+            <h1 class="w-100"><?= htmlspecialchars($txt['activities_title']) ?></h2>
+            <p class="w-100"><?= htmlspecialchars($txt['activities_text1']) ?></p>
+            <p class="w-100"><?= htmlspecialchars($txt['activities_text2']) ?></p>
+            <p class="w-100"><?= htmlspecialchars($txt['activities_text3']) ?></p>
           </div>
       </section>
 
 
 
-      <section class="activities-list">
+      <section class="activities-list container">
         <div class="row">
             <div class="col mr-sm-5">
-                <h2 class="w-100 mb-4">Current Events</h2>
+                <h2 class="w-100 mb-4"><?= htmlspecialchars($txt['activities_currentEvents_title']) ?></h2>
                 <?php require __DIR__ . '/includes/activities-list.php'; ?>
             </div>
             <!-- events newsletter -->
             <div class="col-sm-4">
                 <div class="row sticky-top sticky-padding">
-                    <h2 class="w-100">Stay Up-to-Date</h2>
-                    <p class="w-100">Subscribe to remain updated with latest events at A-Viva.</p>
+                    <h2 class="w-100"><?= htmlspecialchars($txt['activities_currentEvents_stayUpToDate_title']) ?></h2>
+                    <p class="w-100"><?= htmlspecialchars($txt['activities_currentEvents_stayUpToDate_text']) ?></p>
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="name@email.com" aria-label="Recipient's email" aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button">Subscribe</button>
+                            <button class="btn btn-secondary" type="button"><?= htmlspecialchars($txt['activities_currentEvents_stayUpToDate_cta']) ?></button>
                         </div>
                     </div>
                 </div>
@@ -62,65 +62,113 @@
       
       
       
-      <!-- FAQ section -->
-      <?php
+        <!-- FAQ section -->
+        <?php
         $faqItems = [
-            'q1' => [
+            'q1'    => [
                 'ariacontrols' => 'collapseOne',
-                'datatarget'     => '#collapseOne',
-                'id'             => 'headerOne',
-                'question'       => 'What kind of student activities does A-Viva offer?',
-                'answer'         => 'We organize weekly fun activities like city tours, museum visits, cooking nights, movie evenings, and seasonal BBQs. These help students practice German naturally and meet new friends.',
+                'datatarget' => '#collapseOne',
+                'id' => 'headerOne',
+                'question' => [
+                    'en' => 'What kind of student activities does A-Viva offer?',
+                    'de' => 'Welche studentischen Aktivitäten bietet A-Viva an?'
             ],
-            'q2' => [
+                'answer' => [
+                    'en' => 'We organize weekly fun activities like city tours, museum visits, cooking nights, movie evenings, and seasonal BBQs. These help students practice German naturally and meet new friends.',
+                    'de' => 'Wir organisieren wöchentlich unterhaltsame Aktivitäten wie Stadtrundgänge, Museumsbesuche, Kochabende, Filmabende und saisonale Grillfeste. Diese bieten den Schülern die Möglichkeit, Deutsch auf natürliche Weise zu üben und neue Freunde kennenzulernen.'
+                ]
+            ],
+            'q2'    => [
                 'ariacontrols' => 'collapseTwo',
-                'datatarget'     => '#collapseTwo',
-                'id'             => 'headerTwo',
-                'question'       => 'Are trips and excursions included in my course?',
-                'answer'         => 'Many activities, including day trips to Heidelberg, Strasbourg, or local hikes, are offered regularly. Most are included in your course fee or require a small contribution for transport/entry.',
+                'datatarget' => '#collapseTwo',
+                'id' => 'headerTwo',
+                'question' => [
+                    'en' => 'Are trips and excursions included in my course?',
+                    'de' => 'Sind Ausflüge und Exkursionen in meinem Kurs enthalten?'
+                ],
+                'answer' => [
+                    'en' => 'Many activities, including day trips to Heidelberg, Strasbourg, or local hikes, are offered regularly. Most are included in your course fee or require a small contribution for transport/entry.',
+                    'de' => 'Es werden regelmäßig zahlreiche Aktivitäten angeboten, darunter Tagesausflüge nach Heidelberg, Straßburg oder Wanderungen in der Umgebung. Die meisten sind in Ihrer Kursgebühr enthalten oder erfordern einen geringen Beitrag für Transport und Eintrittsgelder.'
+                    ]
             ],
-            'q3' => [
-                'ariacontrols' => 'collapsThreee',
-                'datatarget'     => '#collapseThree',
-                'id'             => 'headerThree',
-                'question'       => 'What kinds of activities and trips are included?',
-                'answer'         => 'A-Viva offers weekly cultural and social activities such as city tours, museum visits, conversation meetups, cooking evenings, and day trips around Hessen. These activities help students practice German in real life and build community outside the classroom.',
+            'q3'    => [
+                'ariacontrols' => 'collapseThree',
+                'datatarget' => '#collapseThree',
+                'id' => 'headerThree',
+                'question' => [
+                    'en' => 'What kinds of activities and trips are included?',
+                    'de' => 'Welche Aktivitäten und Ausflüge sind im Preis inbegriffen?'
+                ],
+                'answer' => [
+                    'en' => 'A-Viva offers weekly cultural and social activities such as city tours, museum visits, conversation meetups, cooking evenings, and day trips around Hessen. These activities help students practice German in real life and build community outside the classroom.',
+                    'de' => 'A-Viva bietet wöchentliche kulturelle und gesellschaftliche Aktivitäten wie Stadtrundgänge, Museumsbesuche, Konversationstreffen, Kochabende und Tagesausflüge in ganz Hessen an. Diese Aktivitäten helfen den Studierenden, Deutsch im Alltag zu üben und außerhalb des Unterrichts Gemeinschaft aufzubauen.'
+                    ]
             ],
-            'q4' => [
+            'q4'    => [
                 'ariacontrols' => 'collapseFour',
-                'datatarget'     => '#collapseFour',
-                'id'             => 'headerFour',
-                'question'       => 'How often are activities held?',
-                'answer'         => 'On average, there is one major activity or trip per week, plus smaller events like coffee chats, movie nights, or cooking workshops. Some special events occur monthly or seasonally.',
+                'datatarget' => '#collapseFour',
+                'id' => 'headerFour',
+                'question' => [
+                    'en' => 'How often are activities held?',
+                    'de' => 'Wie oft finden die Aktivitäten statt?'
+                ],
+                'answer' => [
+                    'en' => 'On average, there is one major activity or trip per week, plus smaller events like coffee chats, movie nights, or cooking workshops. Some special events occur monthly or seasonally.',
+                    'de' => 'Im Durchschnitt findet pro Woche eine größere Aktivität oder ein Ausflug statt, dazu kommen kleinere Veranstaltungen wie Kaffeerunden, Filmabende oder Kochworkshops. Einige Sonderveranstaltungen finden monatlich oder saisonal statt.'
+                    ]
             ],
-            'q5' => [
+            'q5'    => [
                 'ariacontrols' => 'collapseFive',
-                'datatarget'     => '#collapseFive',
-                'id'             => 'headerFive',
-                'question'       => 'Can I join activities even if I’m not in the intensive course?',
-                'answer'         => 'Yes! All students can join activities, regardless of course type, including evening or part-time learners. Activities are designed for all language levels.',
+                'datatarget' => '#collapseFive',
+                'id' => 'headerFive',
+                'question' => [
+                    'en' => 'Can I join activities even if I’m not in the intensive course?',
+                    'de' => 'Kann ich an den Aktivitäten teilnehmen, auch wenn ich nicht am Intensivkurs teilnehme?'
+                ],
+                'answer' => [
+                    'en' => 'Yes! All students can join activities, regardless of course type, including evening or part-time learners. Activities are designed for all language levels.',
+                    'de' => 'Ja! Alle Studierenden können an den Aktivitäten teilnehmen, unabhängig von der Art ihres Studiengangs, auch Abend- und Teilzeitstudierende. Die Aktivitäten sind für alle Sprachniveaus konzipiert.'
+                    ]
             ],
-            'q6' => [
+            'q6'    => [
                 'ariacontrols' => 'collapseSix',
-                'datatarget'     => '#collapseSix',
-                'id'             => 'headerSix',
-                'question'       => 'Are the activities free?',
-                'answer'         => 'Many activities are free, such as conversation cafés, city walks, or campus meetups. Others, like museum trips or special excursions, may have a small cost to cover tickets or transport.',
+                'datatarget' => '#collapseSix',
+                'id' => 'headerSix',
+                'question' => [
+                    'en' => 'Are the activities free?',
+                    'de' => 'Sind die Aktivitäten kostenlos?'
+                ],
+                'answer' => [
+                    'en' => 'Many activities are free, such as conversation cafés, city walks, or campus meetups. Others, like museum trips or special excursions, may have a small cost to cover tickets or transport.',
+                    'de' => 'Viele Aktivitäten sind kostenlos, wie zum Beispiel Konversationscafés, Stadtrundgänge oder Treffen auf dem Campus. Für andere, wie Museumsbesuche oder besondere Ausflüge, fallen möglicherweise geringe Kosten für Eintrittskarten oder Transport an.'
+                    ]
             ],
-            'q7' => [
+            'q7'    => [
                 'ariacontrols' => 'collapseSeven',
-                'datatarget'     => '#collapseSeven',
-                'id'             => 'headerSeven',
-                'question'       => 'Do I need to sign up in advance for activities?',
-                'answer'         => 'Yes, for larger trips and workshops, we ask students to register so we can organize transport, materials, and guides. Smaller events like coffee chats or movie nights are first-come, first-served.',
+                'datatarget' => '#collapseSeven',
+                'id' => 'headerSeven',
+                'question' => [
+                    'en' => 'Do I need to sign up in advance for activities?',
+                    'de' => 'Muss ich mich für die Aktivitäten im Voraus anmelden?'
+                ],
+                'answer' => [
+                    'en' => 'Yes, for larger trips and workshops, we ask students to register so we can organize transport, materials, and guides. Smaller events like coffee chats or movie nights are first-come, first-served.',
+                    'de' => 'Ja, bei größeren Ausflügen und Workshops bitten wir die Teilnehmer, sich anzumelden, damit wir Transport, Materialien und Begleiter organisieren können. Bei kleineren Veranstaltungen wie Kaffeerunden oder Filmabenden gilt das Prinzip „Wer zuerst kommt, mahlt zuerst“.'
+                    ]
             ],
-            'q8' => [
+            'q8'    => [
                 'ariacontrols' => 'collapseEight',
-                'datatarget'     => '#collapseEight',
-                'id'             => 'headerEight',
-                'question'       => 'Are the activities suitable for beginners?',
-                'answer'         => 'Absolutely. Activities are designed so everyone can participate, even if your German is just starting. Guides and teachers are there to help and explain throughout.',
-            ],
+                'datatarget' => '#collapseEight',
+                'id' => 'headerEight',
+                'question' => [
+                    'en' => 'Are the activities suitable for beginners?',
+                    'de' => 'Sind die Aktivitäten für Anfänger geeignet?'
+                ],
+                'answer' => [
+                    'en' => 'Absolutely. Activities are designed so everyone can participate, even if your German is just starting. Guides and teachers are there to help and explain throughout.',
+                    'de' => 'Auf jeden Fall. Die Aktivitäten sind so konzipiert, dass jeder mitmachen kann, auch wenn man gerade erst mit Deutsch anfängt. Die Betreuer und Lehrer stehen die ganze Zeit über mit Rat und Tat zur Seite.'
+                    ]
+            ]
         ];
         require __DIR__ . '/includes/faq.php'; ?>
     </main>

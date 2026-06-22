@@ -169,9 +169,35 @@ if ($currentLang === 'de') {
       'message' => 'Nachricht',
       'message_placeholder' => 'Ihre Nachricht',
       'contact_cta' => 'Nachricht senden',
-      'thankyou_text' => 'Vielen Dank. Ihre Nachricht wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
+      'thankyou_text' => 'Vielen Dank. Ihre Nachricht wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.',
+
+
+
+
+
+    //   page: activities.php. lang: en
+    'activities_title' => 'Aktivitäten bei A-Viva',
+    'activities_text1' => 'Unsere Aktivitäten sind sorgfältig darauf ausgerichtet, dass die Studierenden eine Verbindung zu ihrer Umgebung aufbauen und ihre Sprachkenntnisse anwenden können. Sie sind entweder kostenlos oder mit minimalen Kosten verbunden. Wir sind gemeinnützig tätig, und die Reiseplanung ist für unsere Studierenden ein kostenloser Service! Unsere engagierten Reiseplaner sind erfahrene Reisende, die sich in den Städten und mit den Sprachen auskennen und die besten lokalen Angebote finden können.',
+    'activities_text2' => 'Die Tagesausflüge finden am Wochenende statt. Ein beliebtes Ausflugsziel ist beispielsweise Heidelberg, eine romantische Universitätsstadt, deren Schönheit im Laufe der Jahrhunderte viele Maler und Schriftsteller inspiriert hat.',
+    'activities_text3' => 'Wochenendausflüge finden am Monatsende statt und dauern zwischen 2 und 4 Tagen. Zum Beispiel: Berlin – ein kulturelles und historisches Mekka Deutschlands – oder München – die wunderbare Gastgeberstadt des Oktoberfestes. Weitere Reiseziele sind Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prag und Wien.',
+
+    // ACTIVITIES LIST
+    'activities_currentEvents_title' => 'Aktuelles',
+    'activities_currentEvents_stayUpToDate_title' => 'Bleiben Sie auf dem Laufenden',
+    'activities_currentEvents_stayUpToDate_text' => 'Abonnieren Sie unseren Newsletter, um über die neuesten Veranstaltungen bei A-Viva auf dem Laufenden zu bleiben.',
+    'activities_currentEvents_stayUpToDate_cta' => 'Abonnieren',
     ]; 
+
+
+
+
+
 } else {
+
+
+
+
+
     $txt = [
       // page: index.php, lang: en   
       // HERO
@@ -341,6 +367,22 @@ if ($currentLang === 'de') {
       'message' => 'Message',
       'message_placeholder' => 'Your message',
       'contact_cta' => 'Send message',
-      'thankyou_text' => 'Thank you. Your message has been sent. We will get back to you as soon as possible.'
+      'thankyou_text' => 'Thank you. Your message has been sent. We will get back to you as soon as possible.',
+
+
+
+
+
+    //   page: activities.php. lang: en
+    'activities_title' => 'Activities At A-Viva',
+    'activities_text1' => 'Our activities are carefully designed for students to build a connection with their surroundings and practise their language. They are either free or at minimal cost. We are non-profit oriented, and travel planning is a free service to our students! Our dedicated travel planners are experienced travelers familiar with the cities and the languages and able to find the best local deals.',
+    'activities_text2' => 'Day trips take place at the end of the week. i.e.: a popular destination is Heidelberg, a romantic university town whose beauty has inspired many painters and writers over the centuries.',
+    'activities_text3' => 'Week-end trips take place at the end of the month and last from 2 to 4 days. For example: Berlin - a cultural and historical mecca of Germany, or Munich - the marvelous host city of Oktoberfest. Other destinations include Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prague, and Vienna.',
+
+    // ACTIVITIES LIST
+    'activities_currentEvents_title' => 'Current Events',
+    'activities_currentEvents_stayUpToDate_title' => 'Stay Up-to-Date',
+    'activities_currentEvents_stayUpToDate_text' => 'Subscribe to remain updated with latest events at A-Viva.',
+    'activities_currentEvents_stayUpToDate_cta' => 'Subscribe',
     ];
 }
