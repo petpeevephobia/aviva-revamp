@@ -1,53 +1,17 @@
+<?php
+  
+
+  $currentPage = 'contact'; 
+  $pageTitle = 'A-Viva Sprachschule - Contact';
+  $pageDescription = '...';
+  
+  require __DIR__ . '/includes/head.php';
+  require __DIR__ . '/includes/translations.php';
+?>
+
 <!doctype html>
-<html lang="en">
-  <?php require __DIR__ . '/includes/head.php'; ?>
-
-
-
-
-  <?php
-  $pageTitle   = 'A-Viva Sprachschule - Contact Us';
-  $currentPage = 'contact';
-  // $pageDescription = 'German courses in Frankfurt...';
-
-  if ($currentLang === 'de') {
-    $txt = [
-      'contact_title' => 'Kontakt',
-      'contact_text' => 'Wir melden uns so schnell wie möglich bei Ihnen.',
-      'name' => 'Name',
-      'name_placeholder' => 'Ihr Name',
-      'email' => 'Email',
-      'email_placeholder' => 'name@beispiel.com',
-      'phone_number' => 'Telefonnummer',
-      'phone_number_placeholder' => 'Ihre Telefonnummer',
-      'message' => 'Nachricht',
-      'message_placeholder' => 'Ihre Nachricht',
-      'contact_cta' => 'Nachricht senden',
-      'thankyou_text' => 'Vielen Dank. Ihre Nachricht wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.'
-    ];
-  } else {
-    $txt = [
-      'contact_title' => 'Contact Us',
-      'contact_text' => 'We will get back to you as soon as possible.',
-      'name' => 'Name',
-      'name_placeholder' => 'Your name',
-      'email' => 'Email',
-      'email_placeholder' => 'name@example.com',
-      'phone_number' => 'Phone number',
-      'phone_number_placeholder' => 'Your phone number',
-      'message' => 'Message',
-      'message_placeholder' => 'Your message',
-      'contact_cta' => 'Send message',
-      'thankyou_text' => 'Thank you. Your message has been sent. We will get back to you as soon as possible.'
-    ];
-  }
-
-  require __DIR__ . '/includes/contact-handler.php';
-  ?>
-
-
-
-
+<html lang="<?= htmlspecialchars($currentLang) ?>">
+  <?php require __DIR__ . '/includes/contact-handler.php'; ?>
 
   <body>
     <!-- START nav -->

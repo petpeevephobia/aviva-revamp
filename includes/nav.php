@@ -13,7 +13,7 @@ if ($currentLang === 'de') {
         'home'       => ['url' => 'index.php', 'label' => 'Home'],
         'programs'   => ['url' => 'programs.php', 'label' => 'Programs'],
         'activities' => ['url' => 'activities.php', 'label' => 'Activities'],
-        'registration' => ['url' => 'register.php', 'label' => 'Registration'],
+        'registration' => ['url' => 'register.php', 'label' => 'Register'],
         'contact'    => ['url' => 'contact.php', 'label' => 'Contact']
     ];
 }

@@ -1,23 +1,20 @@
 <?php
-$pageTitle = $pageTitle ?? 'A-Viva Sprachschule';
-$pageDescription = $pageDescription ?? '';
-$extraCss = $extraCss ?? []; // optional per-page stylesheets
-
-// Language selector
+// 1. Start session
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
 }
 
-// 2. Define allowed languages
 $allowedLangs = ['en', 'de'];
+  if (isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs)) {
+      $_SESSION['lang'] = $_GET['lang'];
+  }
 
-// 3. Set the language
-if (isset($_GET['lang']) && in_array($_GET['lang'], $allowedLangs)) {
-    $_SESSION['lang'] = $_GET['lang'];
-}
-
-// 4. Set the global variable
+// 4. Set global variable
 $currentLang = $_SESSION['lang'] ?? 'en';
+
+$pageTitle = $pageTitle ?? 'A-Viva Sprachschule';
+$pageDescription = $pageDescription ?? '';
+$extraCss = $extraCss ?? []; // optional per-page stylesheets
 ?>
 
 

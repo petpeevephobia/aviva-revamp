@@ -1,16 +1,15 @@
 <?php
-$pageTitle   = 'A-Viva Sprachschule - Activities';
-$currentPage = 'activities';
-// $pageDescription = 'German courses in Frankfurt...';
+  $currentPage = 'home'; 
+  $pageTitle = 'A-Viva Sprachschule - Home';
+  $pageDescription = '...';
+  
+  require __DIR__ . '/includes/head.php';
+  require __DIR__ . '/includes/translations.php';
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="<?= htmlspecialchars($currentLang) ?>">
   <?php require __DIR__ . '/includes/head.php'; ?>
-
-
-
-
 
   <body>
     <!-- START nav -->

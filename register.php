@@ -1,61 +1,15 @@
+<?php
+  $currentPage = 'register'; 
+  $pageTitle = 'A-Viva Sprachschule - Register';
+  $pageDescription = '...';
+  
+  require __DIR__ . '/includes/head.php';
+  require __DIR__ . '/includes/translations.php';
+?>
+
+
 <!doctype html>
-<html lang="en">
-  <?php require __DIR__ . '/includes/head.php'; ?>
-
-
-
-  <?php
-  $pageTitle   = 'A-Viva Sprachschule - Register';
-  $currentPage = 'register';
-  // $pageDescription = 'German courses in Frankfurt...';
-
-  if ($currentLang === 'de') {
-    $txt = [
-      'register_title' => 'Anmeldung',
-      'register_text' => 'Der Einstieg bei A-Viva ist ganz einfach. Befolgen Sie diese Schritte, um Ihr Interesse zu bekunden und sich Ihren Platz zu sichern:',
-      'register_item1' => 'Schreiben Sie uns eine E-Mail über den untenstehenden Link „Jetzt bewerben“ – stellen Sie sich vor und bekunden Sie Ihr Interesse an Ihrem Wunschprogramm.',
-      'register_item2' => 'Bitte legen Sie die erforderlichen Unterlagen vor – für deutsche Studierende: Personalausweis oder Reisepass. Für internationale Studierende: Reisepass, Visum (falls erforderlich) und gegebenenfalls Nachweis über Vorkenntnisse in der Sprache.',
-      'register_item3' => 'Einstufungstest – Absolvieren Sie einen schriftlichen und mündlichen Einstufungstest, um sicherzustellen, dass Sie in das richtige Niveau eingestuft werden.',
-      'register_item4' => 'Bestätigung – Sobald Ihre Anmeldung angenommen wurde, erhalten Sie eine Kursbestätigung und eine Rechnung.',
-      
-      // ACCOMMODATION
-      'register_accommodation_title' => 'Unterkunftsmöglichkeiten',
-      'register_accommodation_text' => 'Wir sorgen dafür, dass sich Studierende wohlfühlen – ganz gleich, wie hoch ihr Budget ist oder welche Vorlieben sie haben. Alle Unterkünfte liegen in unmittelbarer Nähe von A-Viva oder sind gut an den öffentlichen Nahverkehr angebunden.',
-      'register_accommodation_item1_title' => 'Studentenwohnung',
-      'register_accommodation_item1_text' => 'Moderne, komplett möblierte Wohnungen in Frankfurt – ideal für ein unabhängiges Leben.',
-      'register_accommodation_item2_title' => 'Gastfamilie',
-      'register_accommodation_item2_text' => 'Wohne bei einer Gastfamilie vor Ort und tauche in die deutsche Kultur und die Alltagssprache ein.',
-      'register_accommodation_item3_title' => 'Jugendherberge',
-      'register_accommodation_item3_text' => 'Preisgünstige Optionen für Kurzaufenthalte oder Studierende, die ein geselliges Umfeld bevorzugen.',
-      'register_accommodation_cta' => 'Informationen zur Unterkunft anfordern'
-    ];
-  } else {
-    $txt = [
-      // HERO
-      'register_title' => 'Registration',
-      'register_text' => 'Starting your journey at A-Viva is easy. Follow these steps to express interest and secure your spot:',
-      'register_item1' => 'Write an email to us via "Apply now" below – Introduce yourself and express interest for your desired program.',
-      'register_item2' => 'Provide required documents – for German students: ID or passport. For international students: passport, visa (if required), and proof of prior language knowledge if applicable.',
-      'register_item3' => 'Placement test – complete a written and oral placement test to ensure you join the right level.',
-      'register_item4' => 'Confirmation – once accepted, you will receive a course confirmation and invoice.',
-
-      // ACCOMMODATION
-      'register_accommodation_title' => 'Accommodation Options',
-      'register_accommodation_text' => 'We help students feel at home, whatever their budget or preference. All options are within easy reach of A-Viva or well-connected by public transport.',
-      'register_accommodation_item1_title' => 'Student Apartment',
-      'register_accommodation_item1_text' => 'Modern, fully furnished apartments in Frankfurt, perfect for independence.',
-      'register_accommodation_item2_title' => 'Host Family',
-      'register_accommodation_item2_text' => 'Live with a local family and immerse yourself in German culture and everyday language.',
-      'register_accommodation_item3_title' => 'Youth Hostel',
-      'register_accommodation_item3_text' => 'Budget-friendly options for short-term stays or students who prefer a social environment.',
-      'register_accommodation_cta' => 'Enquire about housing'
-    ];
-  }
-  ?>
-
-
-
-
+<html lang="<?= htmlspecialchars($currentLang) ?>">
 
   <body>
     <!-- START nav -->
@@ -97,7 +51,7 @@
             <p class="w-100"><?= htmlspecialchars($txt['register_accommodation_text']) ?></p>
           </div>
 
-          <div class="row h-100">
+          <div class="row">
 
             <div class="col mb-2">
               <div class="card">
