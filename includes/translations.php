@@ -187,7 +187,7 @@ if ($currentLang === 'de') {
 
 
 
-      // page: impressum. lang: de
+      // page: impressum, lang: de
       'impressum_title' => 'Impressum',
       'impressum_title_text1' => 'Dieser Internet-Auftritt wird gestaltet und herausgegeben von:',
       'impressum_title_text2' => 'Für den Inhalt der Website ist Darryl Wayne verantwortlich.',
@@ -197,6 +197,36 @@ if ($currentLang === 'de') {
       'impressum_title2_text3' => 'Copyright: A-viva Frankfurt am Main« zu erfolgen und ist nur nach schriftlicher Zustimmung durch Darryl Wayne gestattet.',
       'impressum_title3' => 'Copyright für Abbildungen',
       'impressum_title3_text1' => 'Die Bildrechte an den verwendeten Abbildungen liegen bei "A-viva Frankfurt am Main" bzw. "www.pixelquelle.de" oder es bestehen entsprechende Nutzungsrechte mit dem Urheber.',
+
+
+
+
+
+      // page: datenschutz.php, lang: de
+      'datenschutz_title' => 'Datenschutzerklärung',
+      'datenschutz_title2' => 'Datenerhebung',
+      'datenschutz_title2_text1' => 'Wir erheben Daten bei einer Anfrage über eines unseres Onlineformulare oder per E-Mail oder beim Anbahnen, beim Abschluss, beim Abwickeln und beim Rückabwickeln eines Vertrages. Diese Daten werden von uns erhoben, gespeichert und verarbeitet.',
+      'datenschutz_title2_text2' => 'Ihr Besuch auf unseren Webseiten wird protokolliert. Erfasst werden im Wesentlichen die aktuell von Ihrem PC verwendete IP-Adresse, Datum und Uhrzeit, der Browsertyp und das Betriebssystem Ihres PC sowie die von Ihnen betrachteten Seiten. Ein Personenbezug ist uns im Regelfall nicht möglich und auch nicht beabsichtigt.',
+      'datenschutz_title3' => 'Datenverwendung und -weitergabe',
+      'datenschutz_title3_text1' => 'Die personenbezogenen Daten, die Sie uns z.B. bei einer Bestellung oder per E-Mail mitteilen (z.B. Ihr Name, Ihre Adresse sowie weitere Kontaktdaten), werden zur Korrespondenz mit Ihnen und für den Zweck verarbeitet, zu dem Sie uns die Daten zur Verfügung gestellt haben.',
+      'datenschutz_title3_text2' => 'Wir nutzen und verarbeiten Ihre personenbezogenen Daten außerdem für eigene, werbliche Zwecke für eigene ähnliche Waren bzw. Dienstleistungen, die Sie bei uns bereits bestellt bzw. gebucht hatten.',
+      'datenschutz_title3_text3' => 'Wir versichern, dass wir Ihre personenbezogenen Daten im Übrigen nicht an Dritte weitergeben, es sei denn, dass wir dazu gesetzlich verpflichtet wären oder Sie uns vorher Ihre Zustimmung gegeben haben. Soweit wir zur Durchführung und Abwicklung von Verarbeitungsprozessen Dienstleister in Anspruch nehmen, werden die Vertragsverhältnisse nach den Bestimmungen des Bundesdatenschutzgesetzes geregelt.',
+      'datenschutz_title4' => 'Einwilligung und Widerruf',
+      'datenschutz_title4_text' => 'Wenn Sie uns personenbezogene Daten überlassen haben, können Sie diese jederzeit wieder löschen. Daten für Abrechnungs- und buchhalterische Zwecke sind von einer Kündigung/einem Widerruf bzw. von einer Löschung nicht berührt.',
+      'datenschutz_title5' => 'Speicherdauer',
+      'datenschutz_title5_text' => 'Personenbezogene Daten, die uns über unsere Website mitgeteilt worden sind, werden nur so lange gespeichert, bis der Zweck erfüllt ist, zu dem sie uns anvertraut wurden. Soweit handels- und steuerrechtliche Aufbewahrungsfristen zu beachten sind, kann die Speicherdauer zu bestimmten Daten bis zu 10 Jahre betragen.',
+      'datenschutz_title6' => 'Webanalyse mit Google Analytics',
+      'datenschutz_title6_text1' => 'Diese Website benutzt Google Analytics, einen Webanalysedienst der Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. ("Google"). Google Analytics verwendet sog. "Cookies", Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Website, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen.',
+      'datenschutz_title6_text2' => 'Unser berechtigtes Interesse ist die statistische Analyse des Nutzerverhaltens zu Optimierungs- und Marketingzwecken. Zum Schutz Ihres Interesses am Datenschutz benutzt diese Webseite Google Analytics mit der Erweiterung "anonymizeIP()", damit die IP-Adressen nur gekürzt weiterverarbeitet werden, um eine direkte Personenbeziehbarkeit auszuschließen.',
+      'datenschutz_title6_text3' => 'Google LLC mit Sitz in den USA ist für das us-europäische Datenschutzübereinkommen „Privacy Shield“ zertifiziert, welches die Einhaltung des in der EU geltenden Datenschutzniveaus gewährleistet.',
+      'datenschutz_title6_text4' => 'Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: optout.',
+      'datenschutz_title6_text5' => 'Sie können die Erfassung auch durch das Setzen eines Opt-Out-Cookies unterbinden. Wenn Sie die zukünftige Erfassung Ihrer Daten beim Besuch dieser Website verhindern möchten, klicken Sie bitte hier:Google Analytics deaktivieren.',
+      'datenschutz_title6_text6' => 'Auf dieser Webseite werden technisch notwendige Cookies eingesetzt. Es handelt sich dabei um kleine Textdateien, die im bzw. von Ihrem Internetbrowser auf Ihrem.',
+      'datenschutz_title6_text7' => 'Unser berechtigtes Interesse ist die Funktionsfähigkeit unserer Webseite. Die durch technisch notwendige Cookies erhobenen Nutzerdaten werden nicht zur Erstellung von Nutzerprofilen verwendet. Dadurch wird Ihr Interesse am Datenschutz gewahrt.',
+      'datenschutz_title6_text8' => 'Die technisch notwendigen Cookies werden im Regelfall mit dem Schließen des Browsers gelöscht.Dauerhaft gespeicherte Cookies haben eine unterschiedlich lange Lebensdauer von einigen Minuten bis zu mehreren Jahren.',
+      'datenschutz_title7' => 'Ihre Rechte, Auskunf',
+      'datenschutz_title7_text1' => 'Sollten Sie mit der Speicherung Ihrer personenbezogenen Daten nicht mehr einverstanden oder diese unrichtig geworden sein, werden wir auf eine entsprechende Weisung hin die Löschung oder Sperrung Ihrer Daten veranlassen oder die notwendigen Korrekturen vornehmen (soweit dies nach dem geltendem Recht möglich ist). Auf Wunsch erhalten Sie unentgeltlich Auskunft über alle personenbezogenen Daten, die wir über Sie gespeichert haben.',
+      'datenschutz_title7_text2' => 'Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten, bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten wenden Sie sich bitte per E-Mail an die Impressum angegebene Kontaktadresse.',
     ]; 
 
 
@@ -396,15 +426,45 @@ if ($currentLang === 'de') {
 
 
 
-    // page: impressum. lang: en
-    'impressum_title' => 'Legal Notice',
-    'impressum_title_text1' => 'This website is designed and published by:',
-    'impressum_title_text2' => 'Darryl Wayne is responsible for the content of the website.',
-    'impressum_title2' => 'Disclaimer and Copyright',
-    'impressum_title2_text1' => 'Links to A-viva\'s websites are permitted, provided that they are the sole content displayed in the browser window.',
-    'impressum_title2_text2' => 'Any distribution or reproduction of the information created by A-viva must include the following source citation:',
-    'impressum_title2_text3' => 'Copyright: “A-viva Frankfurt am Main”; reproduction is permitted only with the written consent of Darryl Wayne.',
-    'impressum_title3' => 'Copyright for Images',
-    'impressum_title3_text1' => 'The copyright to the images used belongs to “A-viva Frankfurt am Main” or “www.pixelquelle.de,” or the necessary usage rights have been obtained from the copyright holder.',
+      // page: impressum, lang: en
+      'impressum_title' => 'Legal Notice',
+      'impressum_title_text1' => 'This website is designed and published by:',
+      'impressum_title_text2' => 'Darryl Wayne is responsible for the content of the website.',
+      'impressum_title2' => 'Disclaimer and Copyright',
+      'impressum_title2_text1' => 'Links to A-viva\'s websites are permitted, provided that they are the sole content displayed in the browser window.',
+      'impressum_title2_text2' => 'Any distribution or reproduction of the information created by A-viva must include the following source citation:',
+      'impressum_title2_text3' => 'Copyright: “A-viva Frankfurt am Main”; reproduction is permitted only with the written consent of Darryl Wayne.',
+      'impressum_title3' => 'Copyright for Images',
+      'impressum_title3_text1' => 'The copyright to the images used belongs to “A-viva Frankfurt am Main” or “www.pixelquelle.de,” or the necessary usage rights have been obtained from the copyright holder.',
+
+
+
+
+
+      // page: datenschutz.php, lang: en
+      'datenschutz_title' => 'Privacy Policy',
+      'datenschutz_title2' => 'Data Collection',
+      'datenschutz_title2_text1' => 'We collect data when you submit an inquiry via one of our online forms or by email, or when a contract is initiated, concluded, executed, or terminated. We collect, store, and process this data.',
+      'datenschutz_title2_text2' => 'Your visit to our website is logged. The information collected primarily includes the IP address currently being used by your computer, the date and time, your browser type and operating system, and the pages you viewed. As a rule, we are unable to identify you personally, nor is that our intention.',
+      'datenschutz_title3' => 'Use and Sharing of Data',
+      'datenschutz_title3_text1' => 'The personal data you provide to us—for example, when placing an order or via email (such as your name, address, and other contact information)—will be processed for the purpose of corresponding with you and for the purpose for which you provided the data to us.',
+      'datenschutz_title3_text2' => 'We also use and process your personal data for our own promotional purposes regarding similar goods or services that you have already ordered or booked from us.',
+      'datenschutz_title3_text3' => 'We assure you that we will not otherwise disclose your personal data to third parties unless we are legally required to do so or you have given us your prior consent. To the extent that we engage service providers to carry out and manage data processing operations, the contractual relationships are governed by the provisions of the Federal Data Protection Act.',
+      'datenschutz_title4' => 'Consent and Withdrawal',
+      'datenschutz_title4_text' => 'If you have provided us with personal data, you may delete it at any time. Data used for billing and accounting purposes is not affected by a termination, revocation, or deletion.',
+      'datenschutz_title5' => 'Retention period',
+      'datenschutz_title5_text' => 'Personal data provided to us via our website will be stored only until the purpose for which it was entrusted to us has been fulfilled. To the extent that retention periods under commercial and tax law must be observed, the storage period for certain data may be up to 10 years.',
+      'datenschutz_title6' => 'Web Analytics with Google Analytics',
+      'datenschutz_title6_text1' => 'This website uses Google Analytics, a web analytics service provided by Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA (“Google”). Google Analytics uses so-called “cookies,” which are text files stored on your computer that enable an analysis of your use of the website. The information generated by the cookie about your use of this website is generally transmitted to and stored on a Google server in the United States. However, if IP anonymization is enabled on this website, your IP address will be truncated by Google beforehand within member states of the European Union or in other signatory states to the Agreement on the European Economic Area. Only in exceptional cases is the full IP address transmitted to a Google server in the United States and truncated there. On behalf of the operator of this website, Google will use this information to evaluate your use of the website, to compile reports on website activity, and to provide other services related to website and internet usage to the website operator.',
+      'datenschutz_title6_text2' => 'Our legitimate interest is the statistical analysis of user behavior for optimization and marketing purposes. To protect your privacy, this website uses Google Analytics with the “anonymizeIP()” extension, so that IP addresses are processed only in truncated form to prevent direct identification of individuals.',
+      'datenschutz_title6_text3' => 'Google LLC, headquartered in the United States, is certified under the U.S.-EU Privacy Shield framework, which ensures compliance with the data protection standards in effect in the EU.',
+      'datenschutz_title6_text4' => 'You can prevent cookies from being stored by adjusting your browser settings accordingly; however, please note that in this case, you may not be able to use all features of this website to their full extent. You can also prevent Google from collecting the data generated by the cookie and related to your use of the website (including your IP address), as well as from processing this data, by downloading and installing the browser plugin available at the following link: optout.',
+      'datenschutz_title6_text5' => 'You can also prevent data collection by setting an opt-out cookie. If you would like to prevent your data from being collected in the future when you visit this website, please click here: Disable Google Analytics.',
+      'datenschutz_title6_text6' => 'This website uses cookies that are technically necessary. These are small text files that are stored in or by your web browser on your.',
+      'datenschutz_title6_text7' => 'Our legitimate interest is to ensure the proper functioning of our website. The user data collected through technically necessary cookies is not used to create user profiles. This safeguards your interest in data protection.',
+      'datenschutz_title6_text8' => 'Technically necessary cookies are usually deleted when you close your browser. Persistent cookies have varying lifespans, ranging from a few minutes to several years.',
+      'datenschutz_title7' => 'Your Rights, Information',
+      'datenschutz_title7_text1' => 'If you no longer consent to the storage of your personal data or if such data has become inaccurate, we will, upon your request, arrange for the deletion or blocking of your data or make the necessary corrections (to the extent permitted by applicable law). Upon request, you will receive, free of charge, information about all personal data we have stored about you.',
+      'datenschutz_title7_text2' => 'If you have any questions regarding the collection, processing, or use of your personal data, or if you wish to request information, correction, restriction, or deletion of your data, please contact us via email at the address listed in the legal notice.',
     ];
 }
