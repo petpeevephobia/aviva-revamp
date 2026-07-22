@@ -13,7 +13,9 @@ if ($currentLang === 'de') {
         'programs'          => ['label' =>  'Programme',  'url'   =>  'programs.php'],
         // 'activities'        => ['label' =>  'Aktivitäten',  'url'   =>  'activities.php'],
         'registration'      => ['label' =>  'Anmeldung',  'url'   =>  'register.php'],
-        'contact'           => ['label' =>  'Kontakt',  'url'   =>  'contact.php']
+        'contact'           => ['label' =>  'Kontakt',  'url'   =>  'contact.php'],
+        'impressum'           => ['label' =>  'Impressum',  'url'   =>  'impressum.php'],
+        'datenschutz'           => ['label' =>  'Datenschutz',  'url'   =>  'datenschutz.php'],
     ]; 
 } else {
     $footerTxt = [
@@ -28,7 +30,9 @@ if ($currentLang === 'de') {
         'programs'          => ['label' =>  'Programs',  'url'   =>  'programs.php'],
         // 'activities'        => ['label' =>  'Activities',  'url'   =>  'activities.php'],
         'registration'      => ['label' =>  'Registration',  'url'   =>  'register.php'],
-        'contact'           => ['label' =>  'Contact',  'url'   =>  'contact.php']
+        'contact'           => ['label' =>  'Contact',  'url'   =>  'contact.php'],
+        'impressum'           => ['label' =>  'Impressum',  'url'   =>  'impressum.php'],
+        'datenschutz'           => ['label' =>  'Datenschutz',  'url'   =>  'datenschutz.php'],
     ];
 }
 ?>

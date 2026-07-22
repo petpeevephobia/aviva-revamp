@@ -157,7 +157,7 @@ if ($currentLang === 'de') {
 
 
 
-      // page: contact.php, lang: en
+      // page: contact.php, lang: de
       'contact_title' => 'Kontakt',
       'contact_text' => 'Bitte vereinbaren Sie einen Termin mit uns. Die A-Viva Sprachschule ist täglich von 09:00 bis 19:00 Uhr erreichbar.',
       'contact_email_title' => 'Schreiben Sie uns',
@@ -171,7 +171,7 @@ if ($currentLang === 'de') {
 
 
 
-      //   page: activities.php. lang: en
+      //   page: activities.php. lang: de
       'activities_title' => 'Aktivitäten bei A-Viva',
       'activities_text1' => 'Unsere Aktivitäten sind sorgfältig darauf ausgerichtet, dass die Studierenden eine Verbindung zu ihrer Umgebung aufbauen und ihre Sprachkenntnisse anwenden können. Sie sind entweder kostenlos oder mit minimalen Kosten verbunden. Wir sind gemeinnützig tätig, und die Reiseplanung ist für unsere Studierenden ein kostenloser Service! Unsere engagierten Reiseplaner sind erfahrene Reisende, die sich in den Städten und mit den Sprachen auskennen und die besten lokalen Angebote finden können.',
       'activities_text2' => 'Die Tagesausflüge finden am Wochenende statt. Ein beliebtes Ausflugsziel ist beispielsweise Heidelberg, eine romantische Universitätsstadt, deren Schönheit im Laufe der Jahrhunderte viele Maler und Schriftsteller inspiriert hat.',
@@ -182,6 +182,21 @@ if ($currentLang === 'de') {
       'activities_currentEvents_stayUpToDate_title' => 'Bleiben Sie auf dem Laufenden',
       'activities_currentEvents_stayUpToDate_text' => 'Abonnieren Sie unseren Newsletter, um über die neuesten Veranstaltungen bei A-Viva auf dem Laufenden zu bleiben.',
       'activities_currentEvents_stayUpToDate_cta' => 'Abonnieren',
+
+
+
+
+
+      // page: impressum. lang: de
+      'impressum_title' => 'Impressum',
+      'impressum_title_text1' => 'Dieser Internet-Auftritt wird gestaltet und herausgegeben von:',
+      'impressum_title_text2' => 'Für den Inhalt der Website ist Darryl Wayne verantwortlich.',
+      'impressum_title2' => 'Haftungsausschluss und Copyright',
+      'impressum_title2_text1' => 'Auf die Webseiten von A-viva kann verlinkt werden, sofern sie alleiniger Bestandteil des Browser-Fensters sind.',
+      'impressum_title2_text2' => 'Die etwaige Weitergabe und Vervielfältigung der von A-viva erstellten Informationen hat unter Angabe der Quelle:',
+      'impressum_title2_text3' => 'Copyright: A-viva Frankfurt am Main« zu erfolgen und ist nur nach schriftlicher Zustimmung durch Darryl Wayne gestattet.',
+      'impressum_title3' => 'Copyright für Abbildungen',
+      'impressum_title3_text1' => 'Die Bildrechte an den verwendeten Abbildungen liegen bei "A-viva Frankfurt am Main" bzw. "www.pixelquelle.de" oder es bestehen entsprechende Nutzungsrechte mit dem Urheber.',
     ]; 
 
 
@@ -376,5 +391,20 @@ if ($currentLang === 'de') {
       'activities_currentEvents_stayUpToDate_title' => 'Stay Up-to-Date',
       'activities_currentEvents_stayUpToDate_text' => 'Subscribe to remain updated with latest events at A-Viva.',
       'activities_currentEvents_stayUpToDate_cta' => 'Subscribe',
+
+
+
+
+
+    // page: impressum. lang: en
+    'impressum_title' => 'Legal Notice',
+    'impressum_title_text1' => 'This website is designed and published by:',
+    'impressum_title_text2' => 'Darryl Wayne is responsible for the content of the website.',
+    'impressum_title2' => 'Disclaimer and Copyright',
+    'impressum_title2_text1' => 'Links to A-viva\'s websites are permitted, provided that they are the sole content displayed in the browser window.',
+    'impressum_title2_text2' => 'Any distribution or reproduction of the information created by A-viva must include the following source citation:',
+    'impressum_title2_text3' => 'Copyright: “A-viva Frankfurt am Main”; reproduction is permitted only with the written consent of Darryl Wayne.',
+    'impressum_title3' => 'Copyright for Images',
+    'impressum_title3_text1' => 'The copyright to the images used belongs to “A-viva Frankfurt am Main” or “www.pixelquelle.de,” or the necessary usage rights have been obtained from the copyright holder.',
     ];
 }
