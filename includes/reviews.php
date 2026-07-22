@@ -59,7 +59,7 @@ if ($currentLang === 'de') {
 
                 <div class="container">
                     <div class="row d-flex">
-                    <img class="mr-3" src="pics/a-initial.svg" alt="A">
+                    <img class="mr-3" src="pics/chinese-initial.svg" alt="A">
                     
                     <div class="col">
                         <div class="row"><p class="reviews-user no-spacing">楊雪榕</p></div>
