@@ -6,7 +6,7 @@ if ($currentLang === 'de') {
         'fr' => 'Französisch',
         'it' => 'Italienisch',
         'sp' => 'Spanisch',
-        'po' => 'Portuguesisch',
+        'ru' => 'Russisch',
         'gr' => 'Griechisch',
         'ch' => 'Chinesisch',
         'ja' => 'Japanisch',
@@ -19,7 +19,7 @@ if ($currentLang === 'de') {
         'fr' => 'French',
         'it' => 'Italian',
         'sp' => 'Spanish',
-        'po' => 'Portuguese',
+        'ru' => 'Russian',
         'gr' => 'Greek',
         'ch' => 'Chinese',
         'ja' => 'Japanese',
@@ -54,8 +54,8 @@ if ($currentLang === 'de') {
     <p><?= htmlspecialchars($langLabels['sp']) ?></p>
     </div>
     <div class="col text-center">
-    <img src="pics/portuguese-lang.png" alt="Portuguese">
-    <p><?= htmlspecialchars($langLabels['po']) ?></p>
+    <img src="pics/russian-lang.png" alt="Russian">
+    <p><?= htmlspecialchars($langLabels['ru']) ?></p>
     </div>
     <div class="col text-center">
     <img src="pics/greek-lang.png" alt="Greek">
@@ -70,7 +70,7 @@ if ($currentLang === 'de') {
     </div>
     <div class="col text-center">
     <img src="pics/japanese-lang.png" alt="Japanese">
-    <p><?= htmlspecialchars($langLabels['ch']) ?></p>
+    <p><?= htmlspecialchars($langLabels['ja']) ?></p>
     </div>
     <div class="col text-center">
     <img src="pics/english-lang.png" alt="English">

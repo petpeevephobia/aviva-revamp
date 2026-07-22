@@ -11,8 +11,8 @@ if ($currentLang === 'de') {
     $quickLinks = [
         'home'              => ['label' =>  'Startseite',  'url'   =>  'index.php'],
         'programs'          => ['label' =>  'Programme',  'url'   =>  'programs.php'],
-        'activities'        => ['label' =>  'Aktivitäten',  'url'   =>  'activities.php'],
-        'registration'      => ['label' =>  'Anmeldung',  'url'   =>  'jobs.php'],
+        // 'activities'        => ['label' =>  'Aktivitäten',  'url'   =>  'activities.php'],
+        'registration'      => ['label' =>  'Anmeldung',  'url'   =>  'register.php'],
         'contact'           => ['label' =>  'Kontakt',  'url'   =>  'contact.php']
     ]; 
 } else {
@@ -26,8 +26,8 @@ if ($currentLang === 'de') {
     $quickLinks = [
         'home'              => ['label' =>  'Home',  'url'   =>  'index.php'],
         'programs'          => ['label' =>  'Programs',  'url'   =>  'programs.php'],
-        'activities'        => ['label' =>  'Activities',  'url'   =>  'activities.php'],
-        'registration'      => ['label' =>  'Registration',  'url'   =>  'jobs.php'],
+        // 'activities'        => ['label' =>  'Activities',  'url'   =>  'activities.php'],
+        'registration'      => ['label' =>  'Registration',  'url'   =>  'register.php'],
         'contact'           => ['label' =>  'Contact',  'url'   =>  'contact.php']
     ];
 }
@@ -59,19 +59,23 @@ if ($currentLang === 'de') {
                         <h4 class="footer-header"><?= htmlspecialchars($footerTxt['contact_us']) ?></h4>
 
                         <div class="row">
-                            <div class="row d-flex">
+                            <div class="row footer-contact-row d-flex">
                                 <div class="col-1"><img src="pics/map-footer-icon.svg" alt="Map icon"></div>
                                 <div class="col">
-                                    <p class="footer-text">Rotlintstraße 43, 60316 Frankfurt am Main</p>
+                                    <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x47bd0ec0937516e5:0xaeb13682de003fd7?sa=X&ved=1t:8290&ictx=111" target="_blank">
+                                        <p class="footer-text">Rotlintstraße 43, 60316 Frankfurt am Main</p>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="row d-flex">
+                            <div class="row footer-contact-row d-flex">
                                 <div class="col-1"><img src="pics/phone-footer-icon.svg" alt="Phone icon"></div>
                                 <div class="col">
-                                    <p class="footer-text">+49 (0) 69 1234567</p>
+                                    <a href="tel:496994340963">
+                                        <p class="footer-text">+49 69 943 409 63</p>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="row d-flex">
+                            <div class="row footer-contact-row d-flex">
                                 <div class="col-1"><img src="pics/mail-footer-icon.svg" alt="E-mail icon"></div>
                                 <div class="col">
                                     <a href="mailto:info@aviva-language.de">
@@ -85,8 +89,8 @@ if ($currentLang === 'de') {
                 </div>
             </div>
         </div>
-        <div class="row">
-            <p class="footer-text w-100 text-center mt-3">© 2026  A-Viva Language School. <?= htmlspecialchars($footerTxt['copyright']) ?></p>
+        <div class="row footer-copyright">
+            <p class="footer-text w-100 text-center mt-3">© 2026 A-Viva Sprachschule. <?= htmlspecialchars($footerTxt['copyright']) ?></p>
         </div>
 
         <div class="row"></div>

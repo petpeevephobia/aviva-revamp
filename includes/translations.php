@@ -57,7 +57,7 @@ if ($currentLang === 'de') {
       // page: programs.php, lang: de
       // HERO
       'programs_hero_title' => 'Präsenzprogramme',
-      'programs_hero_text' => 'Wir bieten Programme auf Deutsch, Chinesisch, Englisch, Französisch, Griechisch, Italienisch, Spanisch, Portugiesisch, Japanisch und auf Anfrage auch in weiteren Sprachen an. Alle Programme finden das ganze Jahr über statt, einschließlich Ferienkursen in den Sommer-, Winter- und Frühjahrsferien sowie in anderen Ferienzeiten. Das A-viva CLASS-Konzept (Kultur. Sprache. Kunst. Sport. Gesellschaftliche Veranstaltungen) basiert auf dem Prinzip „Lernen mit Spaß“ – wenn das Lernen Spaß macht, sind die Schüler motiviert, und das Lernen wird effektiv. Übersetzt mit DeepL.com (kostenlose Version)',
+      'programs_hero_text' => 'Wir bieten Programme auf Deutsch, Chinesisch, Englisch, Französisch, Griechisch, Italienisch, Spanisch, Russisch, Japanisch und auf Anfrage auch in weiteren Sprachen an. Alle Programme finden das ganze Jahr über statt, einschließlich Ferienkursen in den Sommer-, Winter- und Frühjahrsferien sowie in anderen Ferienzeiten. Das A-viva CLASS-Konzept (Kultur. Sprache. Kunst. Sport. Gesellschaftliche Veranstaltungen) basiert auf dem Prinzip „Lernen mit Spaß“ – wenn das Lernen Spaß macht, sind die Schüler motiviert, und das Lernen wird effektiv. Übersetzt mit DeepL.com (kostenlose Version)',
 
       // INTENSIVE COURSES
       'programs_intensive_title' => 'Intensivkurse',
@@ -157,35 +157,31 @@ if ($currentLang === 'de') {
 
 
 
-      // page: contact.php, lang: de
+      // page: contact.php, lang: en
       'contact_title' => 'Kontakt',
-      'contact_text' => 'Wir melden uns so schnell wie möglich bei Ihnen.',
-      'name' => 'Name',
-      'name_placeholder' => 'Ihr Name',
-      'email' => 'Email',
-      'email_placeholder' => 'name@beispiel.com',
-      'phone_number' => 'Telefonnummer',
-      'phone_number_placeholder' => 'Ihre Telefonnummer',
-      'message' => 'Nachricht',
-      'message_placeholder' => 'Ihre Nachricht',
-      'contact_cta' => 'Nachricht senden',
-      'thankyou_text' => 'Vielen Dank. Ihre Nachricht wurde gesendet. Wir melden uns so schnell wie möglich bei Ihnen.',
+      'contact_text' => 'Bitte vereinbaren Sie einen Termin mit uns. Die A-Viva Sprachschule ist täglich von 09:00 bis 19:00 Uhr erreichbar.',
+      'contact_email_title' => 'Schreiben Sie uns',
+      'contact_email_text' => 'Senden Sie eine E-Mail an info@a-viva.net.',
+      'contact_email_cta' => 'Kontaktieren Sie uns per E-Mail',
+      'contact_mobile_title' => 'Rufen Sie uns an',
+      'contact_mobile_text' => 'Sie erreichen uns während unserer Öffnungszeiten unter der Mobilfunknummer +49 69 943 409 63.',
+      'contact_mobile_cta' => 'Kontaktieren Sie uns telefonisch',
 
 
 
 
 
-    //   page: activities.php. lang: en
-    'activities_title' => 'Aktivitäten bei A-Viva',
-    'activities_text1' => 'Unsere Aktivitäten sind sorgfältig darauf ausgerichtet, dass die Studierenden eine Verbindung zu ihrer Umgebung aufbauen und ihre Sprachkenntnisse anwenden können. Sie sind entweder kostenlos oder mit minimalen Kosten verbunden. Wir sind gemeinnützig tätig, und die Reiseplanung ist für unsere Studierenden ein kostenloser Service! Unsere engagierten Reiseplaner sind erfahrene Reisende, die sich in den Städten und mit den Sprachen auskennen und die besten lokalen Angebote finden können.',
-    'activities_text2' => 'Die Tagesausflüge finden am Wochenende statt. Ein beliebtes Ausflugsziel ist beispielsweise Heidelberg, eine romantische Universitätsstadt, deren Schönheit im Laufe der Jahrhunderte viele Maler und Schriftsteller inspiriert hat.',
-    'activities_text3' => 'Wochenendausflüge finden am Monatsende statt und dauern zwischen 2 und 4 Tagen. Zum Beispiel: Berlin – ein kulturelles und historisches Mekka Deutschlands – oder München – die wunderbare Gastgeberstadt des Oktoberfestes. Weitere Reiseziele sind Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prag und Wien.',
+      //   page: activities.php. lang: en
+      'activities_title' => 'Aktivitäten bei A-Viva',
+      'activities_text1' => 'Unsere Aktivitäten sind sorgfältig darauf ausgerichtet, dass die Studierenden eine Verbindung zu ihrer Umgebung aufbauen und ihre Sprachkenntnisse anwenden können. Sie sind entweder kostenlos oder mit minimalen Kosten verbunden. Wir sind gemeinnützig tätig, und die Reiseplanung ist für unsere Studierenden ein kostenloser Service! Unsere engagierten Reiseplaner sind erfahrene Reisende, die sich in den Städten und mit den Sprachen auskennen und die besten lokalen Angebote finden können.',
+      'activities_text2' => 'Die Tagesausflüge finden am Wochenende statt. Ein beliebtes Ausflugsziel ist beispielsweise Heidelberg, eine romantische Universitätsstadt, deren Schönheit im Laufe der Jahrhunderte viele Maler und Schriftsteller inspiriert hat.',
+      'activities_text3' => 'Wochenendausflüge finden am Monatsende statt und dauern zwischen 2 und 4 Tagen. Zum Beispiel: Berlin – ein kulturelles und historisches Mekka Deutschlands – oder München – die wunderbare Gastgeberstadt des Oktoberfestes. Weitere Reiseziele sind Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prag und Wien.',
 
-    // ACTIVITIES LIST
-    'activities_currentEvents_title' => 'Aktuelles',
-    'activities_currentEvents_stayUpToDate_title' => 'Bleiben Sie auf dem Laufenden',
-    'activities_currentEvents_stayUpToDate_text' => 'Abonnieren Sie unseren Newsletter, um über die neuesten Veranstaltungen bei A-Viva auf dem Laufenden zu bleiben.',
-    'activities_currentEvents_stayUpToDate_cta' => 'Abonnieren',
+      // ACTIVITIES LIST
+      'activities_currentEvents_title' => 'Aktuelles',
+      'activities_currentEvents_stayUpToDate_title' => 'Bleiben Sie auf dem Laufenden',
+      'activities_currentEvents_stayUpToDate_text' => 'Abonnieren Sie unseren Newsletter, um über die neuesten Veranstaltungen bei A-Viva auf dem Laufenden zu bleiben.',
+      'activities_currentEvents_stayUpToDate_cta' => 'Abonnieren',
     ]; 
 
 
@@ -198,7 +194,7 @@ if ($currentLang === 'de') {
 
 
 
-    $txt = [
+      $txt = [
       // page: index.php, lang: en   
       // HERO
       'hero_title'    => 'Speak Confident German',
@@ -254,7 +250,7 @@ if ($currentLang === 'de') {
       // page: programs.php, lang: en
       // HERO
       'programs_hero_title' => 'Face-to-Face Programs',
-      'programs_hero_text' => 'We offer programs in German, Chinese, English, French, Greek, Italian, Spanish, Portuguese, Japanese and other languages on request. All programs run year-round, including vacation courses for summer, winter, spring break and other holiday periods. The A-viva CLASS concept (Culture. Language. Arts. Sports. Social events) is based on the principles of “learning by having fun” – when learning is fun, students are motivated, and learning becomes effective.',
+      'programs_hero_text' => 'We offer programs in German, Chinese, English, French, Greek, Italian, Spanish, Russian, Japanese and other languages on request. All programs run year-round, including vacation courses for summer, winter, spring break and other holiday periods. The A-viva CLASS concept (Culture. Language. Arts. Sports. Social events) is based on the principles of “learning by having fun” – when learning is fun, students are motivated, and learning becomes effective.',
 
       // INTENSIVE COURSES
       'programs_intensive_title' => 'Intensive Courses',
@@ -357,32 +353,28 @@ if ($currentLang === 'de') {
 
       // page: contact.php, lang: en
       'contact_title' => 'Contact Us',
-      'contact_text' => 'We will get back to you as soon as possible.',
-      'name' => 'Name',
-      'name_placeholder' => 'Your name',
-      'email' => 'Email',
-      'email_placeholder' => 'name@example.com',
-      'phone_number' => 'Phone number',
-      'phone_number_placeholder' => 'Your phone number',
-      'message' => 'Message',
-      'message_placeholder' => 'Your message',
-      'contact_cta' => 'Send message',
-      'thankyou_text' => 'Thank you. Your message has been sent. We will get back to you as soon as possible.',
+      'contact_text' => 'Please contact us for an appointment. A-Viva Sprachschule is reachable daily from 09:00 to 19:00.',
+      'contact_email_title' => 'Write to us',
+      'contact_email_text' => 'Send an email to info@a-viva.net.',
+      'contact_email_cta' => 'Reach out via email',
+      'contact_mobile_title' => 'Give us a Call',
+      'contact_mobile_text' => 'You may reach us by mobile during our operating hours at +49 69 943 409 63.',
+      'contact_mobile_cta' => 'Reach out via phone',
 
 
 
 
 
-    //   page: activities.php. lang: en
-    'activities_title' => 'Activities At A-Viva',
-    'activities_text1' => 'Our activities are carefully designed for students to build a connection with their surroundings and practise their language. They are either free or at minimal cost. We are non-profit oriented, and travel planning is a free service to our students! Our dedicated travel planners are experienced travelers familiar with the cities and the languages and able to find the best local deals.',
-    'activities_text2' => 'Day trips take place at the end of the week. i.e.: a popular destination is Heidelberg, a romantic university town whose beauty has inspired many painters and writers over the centuries.',
-    'activities_text3' => 'Week-end trips take place at the end of the month and last from 2 to 4 days. For example: Berlin - a cultural and historical mecca of Germany, or Munich - the marvelous host city of Oktoberfest. Other destinations include Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prague, and Vienna.',
+      //   page: activities.php. lang: en
+      'activities_title' => 'Activities At A-Viva',
+      'activities_text1' => 'Our activities are carefully designed for students to build a connection with their surroundings and practise their language. They are either free or at minimal cost. We are non-profit oriented, and travel planning is a free service to our students! Our dedicated travel planners are experienced travelers familiar with the cities and the languages and able to find the best local deals.',
+      'activities_text2' => 'Day trips take place at the end of the week. i.e.: a popular destination is Heidelberg, a romantic university town whose beauty has inspired many painters and writers over the centuries.',
+      'activities_text3' => 'Week-end trips take place at the end of the month and last from 2 to 4 days. For example: Berlin - a cultural and historical mecca of Germany, or Munich - the marvelous host city of Oktoberfest. Other destinations include Hamburg, Dresden, Leipzig, Amsterdam, Paris, Prague, and Vienna.',
 
-    // ACTIVITIES LIST
-    'activities_currentEvents_title' => 'Current Events',
-    'activities_currentEvents_stayUpToDate_title' => 'Stay Up-to-Date',
-    'activities_currentEvents_stayUpToDate_text' => 'Subscribe to remain updated with latest events at A-Viva.',
-    'activities_currentEvents_stayUpToDate_cta' => 'Subscribe',
+      // ACTIVITIES LIST
+      'activities_currentEvents_title' => 'Current Events',
+      'activities_currentEvents_stayUpToDate_title' => 'Stay Up-to-Date',
+      'activities_currentEvents_stayUpToDate_text' => 'Subscribe to remain updated with latest events at A-Viva.',
+      'activities_currentEvents_stayUpToDate_cta' => 'Subscribe',
     ];
 }

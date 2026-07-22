@@ -11,7 +11,6 @@
 
 <!doctype html>
 <html lang="<?= htmlspecialchars($currentLang) ?>">
-  <?php require __DIR__ . '/includes/contact-handler.php'; ?>
 
   <body>
     <!-- START nav -->
@@ -26,6 +25,7 @@
       <!-- hero section -->
       <section class="form-section">
         <div class="container">
+          
           <div class="row mb-4 text-left">
             <h1 class="w-100"><?= htmlspecialchars($txt['contact_title']) ?></h2>
             <p class="w-100">	              	
@@ -33,49 +33,27 @@
             </p>
           </div>
 
-          <!-- Form -->
-          <div class="row">
-            <div class="col-md-8 col-lg-6">
-              <?php if ($formSuccess): ?>
-                <div class="alert alert-success" role="alert">
-                  <?= htmlspecialchars($txt['thankyou_text']) ?>
+          <div class="row mt-4">
+            <div class="col mb-2">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h2><?= htmlspecialchars($txt['contact_email_title']) ?></h2>
+                  <p><?= htmlspecialchars($txt['contact_email_text']) ?></p>
+                  <a href="mailto:info@a-viva.net"><button type="button" class="btn btn-primary"><?= htmlspecialchars($txt['contact_email_cta']) ?></button></a>
                 </div>
-              <?php endif; ?>
-
-              <?php if ($formError !== ''): ?>
-                <div class="alert alert-danger" role="alert">
-                  <?= htmlspecialchars($formError) ?>
-                </div>
-              <?php endif; ?>
-
-              <?php if (!empty($contactRequiresWebServer)): ?>
-                <div class="alert alert-warning" role="alert">
-                  The contact form must be opened through a web server (for example XAMPP or <code>php -S localhost:8000</code> in the project folder, then visit <code>http://localhost:8000/contact.php</code>). Running the PHP file directly in the editor cannot send enquiries.
-                </div>
-              <?php endif; ?>
-
-              <form method="post" action="contact.php">
-                <fieldset<?= !empty($contactRequiresWebServer) ? ' disabled' : '' ?>>
-                <div class="form-group">
-                  <label for="contactName"><?= htmlspecialchars($txt['name']) ?></label>
-                  <input type="text" class="form-control" id="contactName" name="name" placeholder="<?= htmlspecialchars($txt['name_placeholder']) ?>" value="<?= htmlspecialchars($contactName) ?>" required>
-                </div>
-                <div class="form-group">
-                  <label for="contactEmail"><?= htmlspecialchars($txt['email']) ?></label>
-                  <input type="email" class="form-control" id="contactEmail" name="email" placeholder="<?= htmlspecialchars($txt['email_placeholder']) ?>" value="<?= htmlspecialchars($contactEmail) ?>" required>
-                </div>
-                <div class="form-group">
-                  <label for="contactPhone"><?= htmlspecialchars($txt['phone_number']) ?></label>
-                  <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="<?= htmlspecialchars($txt['phone_number_placeholder']) ?>" value="<?= htmlspecialchars($contactPhone) ?>">
-                </div>
-                <div class="form-group">
-                  <label for="contactMessage"><?= htmlspecialchars($txt['message']) ?></label>
-                  <textarea class="form-control" id="contactMessage" name="message" rows="5" placeholder="<?= htmlspecialchars($txt['message_placeholder']) ?>" required><?= htmlspecialchars($contactMessage) ?></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary"><?= htmlspecialchars($txt['contact_cta']) ?></button>
-                </fieldset>
-              </form>
+              </div>
             </div>
+            <div class="col mb-2">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h2><?= htmlspecialchars($txt['contact_mobile_title']) ?></h2>
+                  <p><?= htmlspecialchars($txt['contact_mobile_text']) ?></p>
+                  <a href="tel:496994340963"><button type="button" class="btn btn-primary"><?= htmlspecialchars($txt['contact_mobile_cta']) ?></button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+            
           </div>
         </div>
       </section>

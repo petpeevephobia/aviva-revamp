@@ -89,7 +89,7 @@
           </div>
 
           <div class="row d-flex justify-content-center mt-4">
-            <button class="btn btn-primary"><?= htmlspecialchars($txt['register_accommodation_cta']) ?></button>
+            <a href="contact.php"><button class="btn btn-primary"><?= htmlspecialchars($txt['register_accommodation_cta']) ?></button></a>
           </div>
 
         </div>

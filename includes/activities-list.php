@@ -1,11 +1,11 @@
 <?php
 $eventItems = [
-    'eventOne'    => ['eventName' => 'Coffee & Conversation Practice',    'address'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
-    'eventTwo'    => ['eventName' => 'Coffee & Conversation Practice',    'address'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
-    'eventThree'    => ['eventName' => 'Coffee & Conversation Practice',    'address'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
-    'eventFour'    => ['eventName' => 'Coffee & Conversation Practice',    'address'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
-    'eventFive'    => ['eventName' => 'Coffee & Conversation Practice',    'address'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
-    'eventSix'    => ['eventName' => 'Coffee & Conversation Practice',    'address'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
+    'eventOne'    => ['eventName' => 'Coffee & Conversation Practice',    'location'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
+    'eventTwo'    => ['eventName' => 'Coffee & Conversation Practice',    'location'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
+    'eventThree'    => ['eventName' => 'Coffee & Conversation Practice',    'location'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
+    'eventFour'    => ['eventName' => 'Coffee & Conversation Practice',    'location'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
+    'eventFive'    => ['eventName' => 'Coffee & Conversation Practice',    'location'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
+    'eventSix'    => ['eventName' => 'Coffee & Conversation Practice',    'location'   => 'Rotlintstraße 43, 60316 Frankfurt am Main, Germany',    'date'  =>  '10.2.2026',    'day' => 'Tues',    'time'  => '13:30 - 15:00'],
 ];
 ?>
 
@@ -15,7 +15,7 @@ $eventItems = [
             <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted"><?= htmlspecialchars($item['date']) ?>, <?= htmlspecialchars($item['day']) ?></h6>
                 <h5 class="card-title"><?= htmlspecialchars($item['eventName']) ?></h5>
-                <p class="card-text"><?= htmlspecialchars($item['address']) ?></p>
+                <p class="card-text"><?= htmlspecialchars($item['location']) ?></p>
                 <p class="card-text"><?= htmlspecialchars($item['time']) ?></p>
                 <button class="btn btn-primary">RSVP now</button>
             </div>

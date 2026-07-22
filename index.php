@@ -24,9 +24,9 @@
     <!-- START main -->
     <main class="mx-auto">
 
-    <section class="hero-section container h-100">
+    <section class="hero-section container">
           
-      <div class="row text-center p-5">
+      <div class="row text-center p-5 footer-contact-row">
         <h1 class="w-100"><?= htmlspecialchars($txt['hero_title']) ?></h1>
         <p class="w-100"><?= htmlspecialchars($txt['hero_subtitle']) ?></p>
         <div class="row mx-auto">
@@ -37,20 +37,23 @@
       
       <div class="hero-marquee overflow-hidden w-100 mt-4">
         <div class="d-flex flex-nowrap hero-marquee-track">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/avivaconcert/images/1.jpg" alt="">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/jpmc/images/1 the victory smile.jpg" alt="">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/sushi/images/sushi2.jpg" alt="">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/bonfire/images/bonfire+5.jpg" alt="">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/avivaconcert-1.jpg" alt="">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/jpmc-1 the victory smile.jpg" alt="">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/sushi-sushi2.jpg" alt="">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/bonfire-bonfire+5.jpg" alt="">
       
-          <img class="hero-marquee-img rounded mr-1" src="galeries/avivaconcert/images/1.jpg" alt="" aria-hidden="true">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/jpmc/images/1 the victory smile.jpg" alt="" aria-hidden="true">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/sushi/images/sushi2.jpg" alt="" aria-hidden="true">
-          <img class="hero-marquee-img rounded mr-1" src="galeries/bonfire/images/bonfire+5.jpg" alt="" aria-hidden="true">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/avivaconcert-1.jpg" alt="" aria-hidden="true">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/jpmc-1 the victory smile.jpg" alt="" aria-hidden="true">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/sushi-sushi2.jpg" alt="" aria-hidden="true">
+          <img class="hero-marquee-img rounded mr-1" src="galeries/bonfire-bonfire+5.jpg" alt="" aria-hidden="true">
         </div>
-      </div>
-            
-      <!-- STATS -->
-      <div class="container mt-5">
+      </div>        
+    </section>
+
+
+    <!-- STATS -->
+    <section class="stats-section">
+      <div class="container mt-4">
         <div class="row align-items-center">
           <div class="col-sm p-4">
             <div class="d-flex justify-content-center">
@@ -60,14 +63,14 @@
             <p class="text-center"><?= htmlspecialchars($txt['stats_1']) ?></p>
           </div>
           <div class="red-line d-none d-md-block"></div>
-        
+      
           <div class="col-sm p-4">
             <div class="d-flex justify-content-center">
               <p class="stats-number font-weight-bold mr-1">15+</p>
             </div>
             <p class="text-center"><?= htmlspecialchars($txt['stats_2']) ?></p>
           </div>
-        
+      
           <div class="red-line d-none d-md-block"></div>
           <div class="col-sm p-4">
             <div class="d-flex justify-content-center">
@@ -157,7 +160,7 @@
         </div>
         <div class="row mt-5">
           <div class="col-md mb-5">
-            <img class="rounded section-img" src="galeries/mexicanparty/images/1.jpg" alt="Front door of A-Viva Sprachschule with the Mexican flag on the window.">
+            <img class="rounded section-img" src="galeries/mexicanparty-1.jpg" alt="Front door of A-Viva Sprachschule with the Mexican flag on the window.">
           </div>
           <div class="col-md">
             <div class="row mb-2">
@@ -203,10 +206,10 @@
               <li><img class="mr-2 mb-2" src="pics/red-check.svg" alt="Checkmark"><?= htmlspecialchars($txt['life_list3']) ?></li>
               <li><img class="mr-2" src="pics/red-check.svg" alt="Checkmark"><?= htmlspecialchars($txt['life_list4']) ?></li>
             </ul>
-            <button type="button" class="btn btn-secondary ml-2"><?= htmlspecialchars($txt['life_cta']) ?></button>
+            <!-- <a href="activities.php"><button type="button" class="btn btn-secondary ml-2"><?= htmlspecialchars($txt['life_cta']) ?></button></a> -->
           </div>
           <div class="col-md">
-            <img class="rounded section-img" src="galeries/strasbourg/images/Strasbourg5.jpg" alt="Group of A-Viva enjoying the sun next to a canal in Strasbourg" class="rounded">
+            <img class="rounded section-img" src="galeries/strasbourg-Strasbourg5.jpg" alt="Group of A-Viva enjoying the sun next to a canal in Strasbourg" class="rounded">
           </div>
         </div>
       </div>

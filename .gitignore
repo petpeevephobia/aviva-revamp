@@ -1,7 +1,3 @@
-/vendor/
 /includes/contact-config.local.php
 /storage/contact-enquiries.log
-/debug-d2a114.log
 /composer.phar
-
-repomix-output-22-jun.xml

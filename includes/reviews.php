@@ -4,7 +4,7 @@ if ($currentLang === 'de') {
     $reviewsTxt = [
 
         // GOOGLE RATINGS
-        'ratings_subtitle' => '4,9/5 bei über 70 Google-Bewertungen',
+        'ratings_subtitle' => '4,9/5 bei 70+ Google-Bewertungen',
         'ratings_role' => 'Sprachschüler',
 
     ]; 

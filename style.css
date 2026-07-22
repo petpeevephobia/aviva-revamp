@@ -89,8 +89,8 @@ section {
 
 .btn-primary {
     background-color: var(--red) !important;
-    border: none !important;
-    color: white !important;
+    border: var(--red) 1.5px solid !important;
+    color: white !important;    
 }
 
 .btn-secondary {
@@ -103,7 +103,7 @@ section {
 /* Hero */
 
 .hero-section {
-    height: 75vh;
+    /* height: 75vh; */
     /* background-color: blue; */
     max-width: none !important;
     padding: 80px 0 !important;
@@ -245,11 +245,19 @@ footer {
 }
 
 .footer-text {
-    color: var(--footer-text) !important;
+    color: var(--footer-text) !important;;
 }
 
 .footer-link {
     margin: 0 !important;
+}
+
+.footer-contact-row {
+    margin-right: 0 !important;
+}
+
+.footer-copyright {
+    padding: 0 15px 0 15px !important;
 }
 
 

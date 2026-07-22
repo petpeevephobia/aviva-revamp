@@ -69,8 +69,8 @@
                       <li><?= htmlspecialchars($txt['programs_intensive_a_item4']) ?></li>
                       <li><?= htmlspecialchars($txt['programs_intensive_a_item5']) ?></li>
                     </ul>
-                    <p class="no-spacing"><?= htmlspecialchars($txt['intensive_a_text']) ?></p>
-                    <button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_intensive_a_cta']) ?></button>
+                    <p class="no-spacing"><?= htmlspecialchars($txt['programs_intensive_a_text']) ?></p>
+                    <a href="contact.php"><button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_intensive_a_cta']) ?></button></a>
                   </div>
                 </div>
 
@@ -86,7 +86,7 @@
                       <li><?= htmlspecialchars($txt['programs_intensive_b_item5']) ?></li>
                     </ul>
                     <p class="no-spacing"><?= htmlspecialchars($txt['programs_intensive_b_text']) ?></p>
-                    <button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_intensive_b_cta']) ?></button>
+                    <a href="contact.php"><button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_intensive_b_cta']) ?></button></a>
                   </div>
                 </div>
 
@@ -145,7 +145,7 @@
           ];
         ?>
 
-          <div class="col-md-6 justify-content-center mt-4">
+          <div class="col-md-6 justify-content-center">
             <div class="col-12 no-spacing">
               <table class="programs-pricing-table">
                 <thead>
@@ -229,12 +229,12 @@
                       <li><?= htmlspecialchars($txt['programs_evening_e1_item5']) ?></li>
                     </ul>
                     <p class="no-spacing"><?= htmlspecialchars($txt['programs_evening_e1_text']) ?></p>
-                    <button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_evening_e1_cta']) ?></button>
+                    <a href="contact.php"><button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_evening_e1_cta']) ?></button></a>
                   </div>
                 </div>
 
                 <!-- course 2 -->
-                <div class="card p-4" style="width: 100%;">
+                <div class="card p-4 mb-2" style="width: 100%;">
                   <div class="card-body evening-card">
                     <h3><?= htmlspecialchars($txt['programs_evening_e2_title']) ?></h3>
                     <ul class="card-text mt-3">
@@ -245,7 +245,7 @@
                       <li><?= htmlspecialchars($txt['programs_evening_e2_item5']) ?></li>
                     </ul>
                     <p class="no-spacing"><?= htmlspecialchars($txt['programs_evening_e2_text']) ?></p>
-                    <button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_evening_e2_cta']) ?></button>
+                    <a href="contact.php"><button class="btn btn-primary w-100 mt-3"><?= htmlspecialchars($txt['programs_evening_e2_cta']) ?></button></a>
                   </div>
                 </div>
               </div>
@@ -270,7 +270,7 @@
             ['', '', '30 €', '50 €'],      // row: per extra week
         ];
         ?>
-          <div class="col-md-6 justify-content-center mt-4">
+          <div class="col-md-6 justify-content-center">
             <div class="col-12 no-spacing">
               <table class="programs-pricing-table">
                 <thead>
@@ -329,7 +329,7 @@
                   <h3><?= htmlspecialchars($txt['programs_exams_a_title']) ?></h3>
                   <div class="card-text">
                     <p><?= htmlspecialchars($txt['programs_exams_a_subtitle']) ?></p>
-                    <button class="btn btn-primary w-100"><?= htmlspecialchars($txt['programs_exams_a_cta']) ?></button>
+                    <a href="contact.php"><button class="btn btn-primary w-100"><?= htmlspecialchars($txt['programs_exams_a_cta']) ?></button></a>
                   </div>
                 </div>
               </div>
@@ -341,7 +341,7 @@
                   <h3><?= htmlspecialchars($txt['programs_exams_b_title']) ?></h3>
                   <div class="card-text">
                     <p><?= htmlspecialchars($txt['programs_exams_b_subtitle']) ?></p>
-                    <button class="btn btn-primary w-100"><?= htmlspecialchars($txt['programs_exams_b_cta']) ?></button>
+                    <a href="contact.php"><button class="btn btn-primary w-100"><?= htmlspecialchars($txt['programs_exams_b_cta']) ?></button></a>
                   </div>
                 </div>
               </div>
@@ -423,8 +423,8 @@
                   'de' => 'Welche Sprachen kann ich bei A-Viva lernen?'
           ],
               'answer' => [
-                  'en' => 'We offer German, Chinese, English, French, Greek, Italian, Spanish, Portuguese, and Japanese. Other languages are available on request, depending on demand and availability.',
-                  'de' => 'Wir bieten Deutsch, Chinesisch, Englisch, Französisch, Griechisch, Italienisch, Spanisch, Portugiesisch und Japanisch an. Weitere Sprachen sind auf Anfrage erhältlich, je nach Bedarf und Verfügbarkeit.'
+                  'en' => 'We offer German, Chinese, English, French, Greek, Italian, Spanish, Russian, and Japanese. Other languages are available on request, depending on demand and availability.',
+                  'de' => 'Wir bieten Deutsch, Chinesisch, Englisch, Französisch, Griechisch, Italienisch, Spanisch, Russisch und Japanisch an. Weitere Sprachen sind auf Anfrage erhältlich, je nach Bedarf und Verfügbarkeit.'
               ]
           ],
           'q2'    => [

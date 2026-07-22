@@ -4,7 +4,7 @@ if ($currentLang === 'de') {
     $navItems = [
         'home'       => ['url' => 'index.php', 'label' => 'Startseite'],
         'programs'   => ['url' => 'programs.php', 'label' => 'Programme'],
-        'activities' => ['url' => 'activities.php', 'label' => 'Aktivitäten'],
+        // 'activities' => ['url' => 'activities.php', 'label' => 'Aktivitäten'],
         'registration' => ['url' => 'register.php', 'label' => 'Anmeldung'],
         'contact'    => ['url' => 'contact.php', 'label' => 'Kontakt']
     ];
@@ -12,7 +12,7 @@ if ($currentLang === 'de') {
     $navItems = [
         'home'       => ['url' => 'index.php', 'label' => 'Home'],
         'programs'   => ['url' => 'programs.php', 'label' => 'Programs'],
-        'activities' => ['url' => 'activities.php', 'label' => 'Activities'],
+        // 'activities' => ['url' => 'activities.php', 'label' => 'Activities'],
         'registration' => ['url' => 'register.php', 'label' => 'Register'],
         'contact'    => ['url' => 'contact.php', 'label' => 'Contact']
     ];
